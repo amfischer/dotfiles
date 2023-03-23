@@ -33,7 +33,7 @@ vim.opt.splitright = true
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 
-vim.opt.clipboard = 'unnamedplus' -- use system clipboard
+-- vim.opt.clipboard = 'unnamedplus' -- use system clipboard
 
 vim.opt.confirm = true -- ask for confirmation instead of erroring
 
