@@ -26,6 +26,10 @@ local use = require('packer').use
 -- Packer can manage itself.
 use('wbthomason/packer.nvim')
 
+-- Color scheme: catppuccin
+use('catppuccin/nvim')
+vim.cmd.colorscheme "catppuccin"
+
 -- Commenting support.
 use('tpope/vim-commentary')
 
