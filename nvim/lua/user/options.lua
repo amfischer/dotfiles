@@ -12,8 +12,8 @@ vim.opt.relativenumber = true
 
 vim.opt.wildmode = 'longest:full,full' -- complete the longest common match, and allow tabbing the results to fully complete them
 
--- vim.opt.title = true
--- vim.opt.mouse = 'a' -- enable mouse for all modes
+vim.opt.title = true
+vim.opt.mouse = 'a' -- enable mouse for all modes
 
 vim.opt.termguicolors = true
 
@@ -24,7 +24,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.list = true -- enable the below listchars
--- vim.opt.listchars = { tab = '> ', trail = '.' }
+vim.opt.listchars = { tab = '▸ ', trail = '·' }
 vim.opt.fillchars:append({ eob = ' ' }) -- remove the ~ from end of buffer
 
 vim.opt.splitbelow = true
