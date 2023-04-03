@@ -79,7 +79,7 @@ use('tpope/vim-repeat')
 use('sheerun/vim-polyglot')
 
 -- Navigate seamlessly between Vim windows and Tmux panes.
--- use('christoomey/vim-tmux-navigator')
+use('christoomey/vim-tmux-navigator')
 
 -- Jump to the last location when opening a file.
 use('farmergreg/vim-lastplace')
