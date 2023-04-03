@@ -30,11 +30,15 @@ use('wbthomason/packer.nvim')
 -- use('catppuccin/nvim')
 -- vim.cmd.colorscheme "catppuccin"
 
--- Color scheme: oceanic-next
+-- use ('Yazeed1s/minimal.nvim')
+use ('tanvirtin/monokai.nvim')
+use ('mhartington/oceanic-next')
+
+-- Color scheme: monokai 
 use({
-  'mhartington/oceanic-next',
+  'Yazeed1s/minimal.nvim',
   config = function()
-    vim.cmd('colorscheme OceanicNext')
+    vim.cmd('colorscheme minimal')
     vim.api.nvim_set_hl(0, 'FloatBorder', {
       fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
       bg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
