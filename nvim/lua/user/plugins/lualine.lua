@@ -1,20 +1,4 @@
 -- local separator = { '|', color = 'StatusLineNonText' }
-local custom_oceanic = require'lualine.themes.OceanicNext'
-
--- custom_oceanic.insert.a.bg = '#343d46'
-custom_oceanic.insert.b.bg = '#343d46'
-
--- custom_oceanic.normal.a.bg = '#343d46'
-custom_oceanic.normal.b.bg = '#343d46'
-
--- custom_oceanic.inactive.a.bg = '#343d46'
-custom_oceanic.inactive.b.bg = '#343d46'
-
--- custom_oceanic.visual.a.bg = '#343d46'
-custom_oceanic.visual.b.bg = '#343d46'
-
--- custom_oceanic.replace.a.bg = '#343d46'
-custom_oceanic.replace.b.bg = '#343d46'
 
 require('lualine').setup({
   options = {
