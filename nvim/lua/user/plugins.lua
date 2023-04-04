@@ -31,14 +31,25 @@ use('wbthomason/packer.nvim')
 -- vim.cmd.colorscheme "catppuccin"
 
 -- use ('Yazeed1s/minimal.nvim')
-use ('tanvirtin/monokai.nvim')
-use ('mhartington/oceanic-next')
+-- use ('tanvirtin/monokai.nvim')
+-- use ('mhartington/oceanic-next')
+-- use ('marko-cerovac/material.nvim')
 
--- Color scheme: monokai 
+-- Color scheme 
 use({
-  'Yazeed1s/minimal.nvim',
+  'marko-cerovac/material.nvim',
+  setup = function()
+    lualine_style = "stealth"
+    plugins = {
+      "nvim-tree",
+      "nvim-web-devicons",
+      "telescope"
+    }
+  end,
   config = function()
-    vim.cmd('colorscheme minimal')
+    vim.cmd('colorscheme material')
+    vim.g.material_style = "oceanic" 
+
     vim.api.nvim_set_hl(0, 'FloatBorder', {
       fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
       bg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
@@ -113,12 +124,12 @@ use({
 })
 
 -- Automatically add closing brackets, quotes, etc.
-use({
-  'windwp/nvim-autopairs',
-  config = function()
-    require('nvim-autopairs').setup()
-  end,
-})
+-- use({
+--   'windwp/nvim-autopairs',
+--   config = function()
+--     require('nvim-autopairs').setup()
+--   end,
+-- })
 
 -- Add smooth scrolling to avoid jarring jumps
 use({

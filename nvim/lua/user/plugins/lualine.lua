@@ -1,4 +1,4 @@
-local separator = { '|', color = 'StatusLineNonText' }
+-- local separator = { '|', color = 'StatusLineNonText' }
 local custom_oceanic = require'lualine.themes.OceanicNext'
 
 -- custom_oceanic.insert.a.bg = '#343d46'
@@ -21,7 +21,7 @@ require('lualine').setup({
     section_separators = '',
     globalstatus = true,
     component_separators = '',
-    theme = custom_oceanic, 
+    theme = 'material-stealth', 
     -- theme = {
     --   normal = {
     --     a = 'StatusLine',
@@ -33,15 +33,12 @@ require('lualine').setup({
   sections = {
     lualine_a = {
       'mode',
-      separator,
     },
     lualine_b = {
       'branch',
       'diff',
-      separator,
       '"🖧  " .. tostring(#vim.tbl_keys(vim.lsp.buf_get_clients()))',
       { 'diagnostics', sources = { 'nvim_diagnostic' } },
-      separator,
     },
     lualine_c = {
       'filename'
@@ -52,9 +49,7 @@ require('lualine').setup({
       'fileformat',
     },
     lualine_y = {
-      separator,
       '(vim.bo.expandtab and "␠ " or "⇥ ") .. " " .. vim.bo.shiftwidth',
-      separator,
     },
     lualine_z = {
       'location',
