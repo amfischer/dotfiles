@@ -13,7 +13,7 @@ vim.opt.relativenumber = true
 vim.opt.wildmode = 'longest:full,full' -- complete the longest common match, and allow tabbing the results to fully complete them
 
 vim.opt.title = true
--- vim.opt.mouse = 'a' -- enable mouse for all modes
+vim.opt.mouse = 'a' -- enable mouse for all modes
 
 vim.opt.termguicolors = true
 
@@ -33,7 +33,22 @@ vim.opt.splitright = true
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 
--- vim.opt.clipboard = 'unnamedplus' -- use system clipboard
+-- Configure wsl clipboard tool. See :help clipboard-wsl 
+local cp_dictionary = { 
+    name = 'WslClipboard',
+    copy = {
+        ['+'] = 'clip.exe',
+        ['*'] = 'clip.exe',
+    },
+    paste = {
+        ['+'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+        ['*'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    },
+    cache_enabled = 0,
+}
+vim.g.clipboard = cp_dictionary
+
+vim.opt.clipboard = 'unnamedplus' -- use system clipboard
 
 vim.opt.confirm = true -- ask for confirmation instead of erroring
 
