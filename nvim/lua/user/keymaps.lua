@@ -40,6 +40,11 @@ vim.keymap.set('n', '<A-k>', ':move .-2<CR> ==')
 vim.keymap.set('v', '<A-j>', ":move '>+1<CR>gv=gv")
 vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
 
+-- Open and close window splits
+vim.keymap.set('n', '<Leader>s', ':split<CR>')
+vim.keymap.set('n', '<Leader>v', ':vs<CR>')
+vim.keymap.set('n', '<Leader>Q', '<C-w>q')
+
 -- Switch windows more easily
 -- vim.keymap.set('n', '<C-H>', '<C-W><C-H>')
 -- vim.keymap.set('n', '<C-L>', '<C-W><C-L>')
