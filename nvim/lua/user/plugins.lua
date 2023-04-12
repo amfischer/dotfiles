@@ -197,6 +197,16 @@ use({
   end,
 })
 
+-- Display buffers as tabs.
+use({
+  'akinsho/bufferline.nvim',
+  requires = 'kyazdani42/nvim-web-devicons',
+  after = 'material.nvim',
+  config = function()
+    require('user/plugins/bufferline')
+  end,
+})
+
 -- Floating terminal
 use({
   'voldikss/vim-floaterm',
