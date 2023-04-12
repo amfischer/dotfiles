@@ -61,7 +61,7 @@ use({
       bg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
     })
 
-    vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
+    -- vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
 
     vim.api.nvim_set_hl(0, 'StatusLineNonText', {
       fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
@@ -213,6 +213,20 @@ use({
   end
 })
 
+-- Improved syntax highlighting
+use({
+  'nvim-treesitter/nvim-treesitter',
+  run = function()
+    require('nvim-treesitter.install').update({ with_sync = true })
+  end,
+  requires = {
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    'nvim-treesitter/nvim-treesitter-textobjects',
+  },
+  config = function()
+    require('user/plugins/treesitter')
+  end,
+})
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
