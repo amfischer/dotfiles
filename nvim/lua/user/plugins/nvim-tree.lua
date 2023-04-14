@@ -13,6 +13,10 @@ require('nvim-tree').setup({
       enable = true,
     },
   },
+  hijack_directories = {
+    enable = true,
+    auto_open = false,
+  },
 })
 
 vim.keymap.set('n', '<Leader>n', ':NvimTreeToggle<CR>')
