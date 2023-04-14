@@ -9,17 +9,16 @@ require('bufferline').setup({
     offsets = {
       {
         filetype = 'NvimTree',
-        text = '?  Files',
-        highlight = 'StatusLine',
+        text = ' Files',
+        -- highlight = 'StatusLine',
         text_align = 'left',
       },
     },
     separator_style = 'slant',
-    modified_icon = '?',
     custom_areas = {
       left = function()
         return {
-          { text = '  ?  ', fg = '#8fff6d' },
+          { text = '    ', fg = '#8fff6d' },
         }
       end,
     },

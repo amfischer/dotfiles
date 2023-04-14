@@ -6,7 +6,7 @@ require('nvim-tree').setup({
     group_empty = true,
     icons = {
       show = {
-        folder_arrow = false,
+        folder_arrow = true,
       },
     },
     indent_markers = {
@@ -15,4 +15,4 @@ require('nvim-tree').setup({
   },
 })
 
-vim.keymap.set('n', '<Leader>n', ':NvimTreeFindFileToggle<CR>')
+vim.keymap.set('n', '<Leader>n', ':NvimTreeToggle<CR>')
