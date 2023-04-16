@@ -239,6 +239,14 @@ use({
   end,
 })
 
+-- Floating status lines
+use({
+  'b0o/incline.nvim',
+  config = function()
+    require('incline').setup()
+  end,
+})
+
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
 if packer_bootstrap then
