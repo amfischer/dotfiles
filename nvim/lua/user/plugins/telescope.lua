@@ -3,11 +3,22 @@ local actions = require('telescope.actions')
 vim.cmd([[
   highlight link TelescopePromptTitle PMenuSel
   highlight link TelescopePreviewTitle PMenuSel
-  highlight link TelescopePromptNormal NormalFloat
-  highlight link TelescopePromptBorder FloatBorder
+
+  " highlight link TelescopePromptNormal NormalFloat
+  " highlight link TelescopePromptBorder FloatBorder
+
+  highlight link TelescopePromptNormal CursorLine
+  highlight link TelescopePromptBorder CursorLineBg
+
   highlight link TelescopeNormal CursorLine
   highlight link TelescopeBorder CursorLineBg
+
 ]])
+
+-- vim.api.nvim_set_hl(0, 'TelescopeBorder', {bg="#3e5f64"})
+-- vim.api.nvim_set_hl(0, 'TelescopePromptBorder', {bg="#3e5f64"})
+-- vim.api.nvim_set_hl(0, 'TelescopeResultsBorder', {bg="#3e5f64"})
+-- vim.api.nvim_set_hl(0, 'TelescopePreviewLine', {bg="#ffffff"})
 
 require('telescope').setup({
   defaults = {
@@ -26,6 +37,7 @@ require('telescope').setup({
       },
     },
     file_ignore_patterns = { '.git/' },
+    border = true,
   },
   pickers = {
     find_files = {
@@ -54,4 +66,4 @@ vim.keymap.set('n', '<leader>F', [[<cmd>lua require('telescope.builtin').find_fi
 vim.keymap.set('n', '<leader>b', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
 vim.keymap.set('n', '<leader>g', [[<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>]])
 vim.keymap.set('n', '<leader>h', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]])
-vim.keymap.set('n', '<leader>s', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]])
+-- vim.keymap.set('n', '<leader>s', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]])
