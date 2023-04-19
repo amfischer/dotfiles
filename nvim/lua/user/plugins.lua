@@ -124,12 +124,12 @@ use({
 })
 
 -- Automatically add closing brackets, quotes, etc.
--- use({
---   'windwp/nvim-autopairs',
---   config = function()
---     require('nvim-autopairs').setup()
---   end,
--- })
+use({
+  'windwp/nvim-autopairs',
+  config = function()
+    require('nvim-autopairs').setup()
+  end,
+})
 
 -- Add smooth scrolling to avoid jarring jumps
 use({
@@ -243,9 +243,23 @@ use({
 use({
   'b0o/incline.nvim',
   config = function()
-    require('incline').setup()
+    require('user/plugins/incline')
   end,
 })
+
+-- Language Server Protocol
+use({
+  'neovim/nvim-lspconfig',
+  requires = {
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+  },
+  config = function()
+    require('user/plugins/lspconfig')
+  end,
+})
+
+
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
