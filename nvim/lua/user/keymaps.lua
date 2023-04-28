@@ -47,9 +47,13 @@ vim.keymap.set('n', '<Leader>Q', '<C-w>q')
 
 -- Switch between buffers
 vim.keymap.set('n', '<A-Left>', ':bprevious<CR>')
-vim.keymap.set('n', '<A-h>', ':bprevious<CR>')
+-- vim.keymap.set('n', '<A-h>', ':bprevious<CR>')
 vim.keymap.set('n', '<A-Right>', ':bnext<CR>')
-vim.keymap.set('n', '<A-l>', ':bnext<CR>')
+-- vim.keymap.set('n', '<A-l>', ':bnext<CR>')
+
+
+-- Save file more easily
+vim.keymap.set('n', '<C-s>', ':w<CR>')
 
 
 -- Switch windows more easily
