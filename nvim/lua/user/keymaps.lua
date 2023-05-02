@@ -55,6 +55,8 @@ vim.keymap.set('n', '<A-Right>', ':bnext<CR>')
 -- Save file more easily
 vim.keymap.set('n', '<C-s>', ':w<CR>')
 
+vim.keymap.set('n', '<C-p><C-p>', ':PackerCompile<CR>')
+vim.keymap.set('n', '<C-p><C-s>', ':PackerSync<CR>')
 
 -- Switch windows more easily
 -- vim.keymap.set('n', '<C-H>', '<C-W><C-H>')
