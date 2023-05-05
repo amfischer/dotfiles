@@ -34,7 +34,7 @@ vim.opt.splitright = true
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 
-vim.opt.signcolumn = 'yes:1'
+vim.opt.signcolumn = 'yes:2'
 
 -- Configure wsl clipboard tool. See :help clipboard-wsl 
 -- https://github.com/neovim/neovim/wiki/FAQ#how-to-use-the-windows-clipboard-from-wsl

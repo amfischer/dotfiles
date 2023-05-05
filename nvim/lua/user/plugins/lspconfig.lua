@@ -40,6 +40,10 @@ vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 
 vim.cmd('highlight NormalFloat guibg=#314549')
 
+-- vim.cmd([[
+--   highlight link NormalFloat CursorLineBg
+-- ]])
+
 -- Diagnostic configuration
 vim.diagnostic.config({
   virtual_text = false,
@@ -49,7 +53,7 @@ vim.diagnostic.config({
 })
 
 -- Sign configuration
-vim.fn.sign_define('DiagnosticSignError', { text = '?', texthl = 'DiagnosticSignError' })
-vim.fn.sign_define('DiagnosticSignWarn', { text = '?', texthl = 'DiagnosticSignWarn' })
-vim.fn.sign_define('DiagnosticSignInfo', { text = '?', texthl = 'DiagnosticSignInfo' })
-vim.fn.sign_define('DiagnosticSignHint', { text = '?', texthl = 'DiagnosticSignHint' })
+vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
+vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
+vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
+vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSignHint' })
