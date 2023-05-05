@@ -38,6 +38,8 @@ vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>')
 vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 
+vim.cmd('highlight NormalFloat guibg=#314549')
+
 -- Diagnostic configuration
 vim.diagnostic.config({
   virtual_text = false,

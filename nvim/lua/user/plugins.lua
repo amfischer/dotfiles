@@ -261,14 +261,6 @@ use({
   end,
 })
 
--- Floating status lines
-use({
-  'b0o/incline.nvim',
-  config = function()
-    require('user/plugins/incline')
-  end,
-})
-
 -- Language Server Protocol
 use({
   'neovim/nvim-lspconfig',
