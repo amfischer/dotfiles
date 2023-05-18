@@ -25,6 +25,6 @@
 }
 
 
-
+#+n::Run '*RunAs notepad.exe C:\Windows\System32\drivers\etc\hosts'
 
 
