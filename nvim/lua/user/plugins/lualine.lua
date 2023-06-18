@@ -6,13 +6,13 @@ require('lualine').setup({
     globalstatus = true,
     -- component_separators = '',
     theme = 'material-nvim', 
-    -- theme = {
-    --   normal = {
-    --     a = 'StatusLine',
-    --     b = 'StatusLine',
-    --     c = 'StatusLine',
-    --   },
-    -- },
+    theme = {
+      normal = {
+        a = 'StatusLine',
+        b = 'StatusLine',
+        c = 'StatusLine',
+      },
+    },
   },
   sections = {
     lualine_a = {
