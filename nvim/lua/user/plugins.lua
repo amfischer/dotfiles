@@ -48,7 +48,7 @@ use({
   end,
   config = function()
     vim.cmd('colorscheme material')
-    vim.g.material_style = "oceanic" 
+    vim.g.material_style = "darker" 
 
     vim.api.nvim_set_hl(0, 'FloatBorder', {
       fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
@@ -291,6 +291,14 @@ use({
   end,
 })
 
+-- Line indentation
+use({
+  'lukas-reineke/indent-blankline.nvim',
+  config = function()
+    show_current_context = true
+    show_current_context_start = true
+  end,
+})
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
