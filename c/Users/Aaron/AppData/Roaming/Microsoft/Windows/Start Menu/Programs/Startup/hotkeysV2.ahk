@@ -1,9 +1,17 @@
 #Requires AutoHotkey v2.0
 
+#Numpad7::Send "#{1}"
+#Numpad8::Send "#{2}"
+#Numpad9::Send "#{3}"
 
-#Numpad7::Run "C:\Users\amfis\AppData\Local\TogglDesktop\TogglDesktop.exe"
+#Numpad4::Send "#{4}"
+#Numpad5::Send "#{5}"
+#Numpad6::Send "#{6}"
 
-#Numpad8::Run "C:\Program Files\Alacritty\alacritty.exe"
+
+#Numpad1::Run "C:\Users\amfis\AppData\Local\TogglDesktop\TogglDesktop.exe"
+
+#Numpad2::Run "C:\Program Files\Alacritty\alacritty.exe"
 
 
 #c::
