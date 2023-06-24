@@ -1,11 +1,11 @@
--- local separator = { '|', color = 'StatusLineNonText' }
+local separator = { '"▏"', color = 'StatusLineNonText' }
 
 require('lualine').setup({
   options = {
-    -- section_separators = '',
+    section_separators = '"▏"',
+    component_separators = '',
     globalstatus = true,
-    -- component_separators = '',
-    theme = 'material-nvim', 
+    -- theme = 'material-nvim', 
     theme = {
       normal = {
         a = 'StatusLine',
@@ -40,7 +40,7 @@ require('lualine').setup({
       '(vim.bo.expandtab and "␠ " or "⇥ ") .. " " .. vim.bo.shiftwidth',
     },
     lualine_z = {
-      'location',
+      -- 'location',
       'progress',
     },
   },
