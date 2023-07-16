@@ -66,4 +66,6 @@ vim.keymap.set('n', '<A-N>', [[<cmd>lua require('telescope.builtin').find_files(
 vim.keymap.set('n', '<A-b>', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
 vim.keymap.set('n', '<leader>g', [[<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>]])
 vim.keymap.set('n', '<leader>h', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]])
--- vim.keymap.set('n', '<leader>s', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]])
+vim.keymap.set('n', '<A-m>', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]])
+
+

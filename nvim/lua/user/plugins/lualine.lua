@@ -21,7 +21,7 @@ require('lualine').setup({
     lualine_b = {
       'branch',
       'diff',
-      '"🖧  " .. tostring(#vim.tbl_keys(vim.lsp.buf_get_clients()))',
+      -- '"🖧  " .. tostring(#vim.tbl_keys(vim.lsp.buf_get_clients()))',
       { 'diagnostics', sources = { 'nvim_diagnostic' } },
     },
     lualine_c = {
@@ -37,11 +37,21 @@ require('lualine').setup({
       'fileformat',
     },
     lualine_y = {
-      '(vim.bo.expandtab and "␠ " or "⇥ ") .. " " .. vim.bo.shiftwidth',
+      -- '(vim.bo.expandtab and "␠ " or "⇥ ") .. " " .. vim.bo.shiftwidth',
+      '"Spaces:" .. vim.bo.shiftwidth',
     },
     lualine_z = {
       -- 'location',
-      'progress',
+      -- 'progress',
     },
   },
+  -- tabline = {
+  --   lualine_z = {
+  --     {
+  --       'filename',
+  --       file_status = true,
+  --       path = 1
+  --     }
+  --   }
+  -- },
 })

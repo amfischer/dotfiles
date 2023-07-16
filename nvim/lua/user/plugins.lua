@@ -72,6 +72,8 @@ use({
   end
 })
 
+use('tpope/vim-eunuch')
+
 -- Commenting support.
 use('tpope/vim-commentary')
 
@@ -180,13 +182,13 @@ use({
 })
 
 -- File tree sidebar
-use({
-  'nvim-tree/nvim-tree.lua',
-  requires = 'nvim-tree/nvim-web-devicons',
-  config = function()
-    require('user/plugins/nvim-tree')
-  end,
-})
+-- use({
+--   'nvim-tree/nvim-tree.lua',
+--   requires = 'nvim-tree/nvim-web-devicons',
+--   config = function()
+--     require('user/plugins/nvim-tree')
+--   end,
+-- })
 
 -- A Status line.
 use({
