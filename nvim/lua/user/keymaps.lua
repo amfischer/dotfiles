@@ -44,6 +44,7 @@ vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
 vim.keymap.set('n', '<Leader>s', ':split<CR>')
 vim.keymap.set('n', '<Leader>v', ':vs<CR>')
 vim.keymap.set('n', '<Leader>Q', '<C-w>q')
+vim.keymap.set('n', '<Leader>q', ':bdelete<CR>')
 
 -- Switch between buffers
 -- vim.keymap.set('n', '<A-Left>', ':bprevious<CR>')

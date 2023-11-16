@@ -142,12 +142,12 @@ use({
 })
 
 -- All closing buffers without closing the split window.
-use({
-  'famiu/bufdelete.nvim',
-  config = function()
-    vim.keymap.set('n', '<Leader>q', ':Bdelete<CR>')
-  end,
-})
+-- use({
+--   'famiu/bufdelete.nvim',
+--   config = function()
+--     vim.keymap.set('n', '<Leader>q', ':Bdelete<CR>')
+--   end,
+-- })
 
 -- Split arrays and methods onto multiple lines, or join them back up.
 use({
@@ -297,8 +297,15 @@ use({
 use({
   'lukas-reineke/indent-blankline.nvim',
   config = function()
+    require('ibl').setup({
+      -- config = {
+
+        indent = { char = "│" }
+      -- }
+    })
     show_current_context = true
     show_current_context_start = true
+    indent = { char = "│" }
   end,
 })
 
