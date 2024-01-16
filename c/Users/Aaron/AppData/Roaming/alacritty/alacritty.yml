@@ -9,7 +9,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - C:\Users\amfis\AppData\Roaming\alacritty\themes\oceanic_next.yml
+  - C:\Users\Aaron\AppData\Roaming\alacritty\themes\oceanic_next.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -389,7 +389,7 @@ font:
 #selection:
   # This string contains all characters that are used as separators for
   # "semantic words" in Alacritty.
-  #semantic_escape_chars: ",³`|:\"' ()[]{}<>\t"
+  #semantic_escape_chars: ",ï¿½`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
   #save_to_clipboard: false
@@ -453,7 +453,7 @@ font:
 shell:
   program: "C:\\Windows\\System32\\wsl.exe ~"
   args:
-    - -d Ubuntu-20.04
+    - -d Ubuntu-22.04
 
 # Startup directory
 #
