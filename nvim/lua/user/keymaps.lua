@@ -31,8 +31,8 @@ vim.keymap.set('n', '<Leader>k', ':nohlsearch<CR>')
 -- vim.keymap.set('n', '<Leader>x', '!xdg-open %<CR><CR>')
 
 -- Move lines up and down.
-vim.keymap.set('i', '<A-j>', '<Esc>:move .+1<CR> == gi')
-vim.keymap.set('i', '<A-k>', '<Esc>:move .-2<CR> == gi')
+-- vim.keymap.set('i', '<A-j>', '<Esc>:move .+1<CR> == gi')
+-- vim.keymap.set('i', '<A-k>', '<Esc>:move .-2<CR> == gi')
 
 vim.keymap.set('n', '<A-j>', ':move .+1<CR> ==')
 vim.keymap.set('n', '<A-k>', ':move .-2<CR> ==')
@@ -64,5 +64,8 @@ vim.keymap.set('n', '<C-p><C-s>', ':PackerSync<CR>')
 -- vim.keymap.set('n', '<C-L>', '<C-W><C-L>')
 -- vim.keymap.set('n', '<C-J>', '<C-W><C-J>')
 -- vim.keymap.set('n', '<C-K>', '<C-W><C-K>')
+
+vim.keymap.set('n', '<A-d>', ':t.<CR>')
+
 
 

@@ -1,7 +1,7 @@
 import = ['C:\Users\Aaron\AppData\Roaming\alacritty\themes\oceanic_next.toml']
 
 [env]
-TERM = "alacritty"
+TERM = "xterm-256color"
 
 [font]
 size = 11.0

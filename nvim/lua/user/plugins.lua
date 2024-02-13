@@ -47,26 +47,26 @@ use({
     }
   end,
   config = function()
-    vim.cmd('colorscheme material')
     vim.g.material_style = "darker" 
+    vim.cmd('colorscheme material')
 
-    vim.api.nvim_set_hl(0, 'FloatBorder', {
-      fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
-      bg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
-    })
+    -- vim.api.nvim_set_hl(0, 'FloatBorder', {
+    --   fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
+    --   bg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
+    -- })
 
     -- Make the cursor line background invisible
-    vim.api.nvim_set_hl(0, 'CursorLineBg', {
-      fg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
-      bg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
-    })
+    -- vim.api.nvim_set_hl(0, 'CursorLineBg', {
+    --   fg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
+    --   bg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
+    -- })
 
     -- vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
 
-    vim.api.nvim_set_hl(0, 'StatusLineNonText', {
-      fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
-      bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
-    })
+    -- vim.api.nvim_set_hl(0, 'StatusLineNonText', {
+    --   fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
+    --   bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
+    -- })
 
     vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
   end
@@ -138,6 +138,10 @@ use({
   'karb94/neoscroll.nvim',
   config = function()
     require('neoscroll').setup()
+    -- local t = {}
+    -- t['<A-u>'] = {'scroll', {'-vim.wo.scroll', 'true', '250'}}
+    -- t['<A-d>'] = {'scroll', {'vim.wo.scroll', 'true', '250'}}
+    -- require('neoscroll.config').set_mappings(t)
   end,
 })
 
@@ -241,10 +245,10 @@ use({
     -- vim.g.floaterm_wintype = 'split'
     vim.keymap.set('n', '<F1>', ':FloatermToggle<CR>')
     vim.keymap.set('t', '<F1>', '<C-\\><C-n>:FloatermToggle<CR>')
-    vim.cmd([[
-      highlight link Floaterm CursorLine
-      highlight link FloatermBorder CursorLineBg
-    ]])
+    -- vim.cmd([[
+    --   highlight link Floaterm CursorLine
+    --   highlight link FloatermBorder CursorLineBg
+    -- ]])
   end
 })
 
