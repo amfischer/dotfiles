@@ -45,9 +45,12 @@ use({
       "nvim-web-devicons",
       "telescope"
     }
+    contrast = {
+      floating_windows = true
+    }
   end,
   config = function()
-    vim.g.material_style = "darker" 
+    vim.g.material_style = "oceanic" 
     vim.cmd('colorscheme material')
 
     -- vim.api.nvim_set_hl(0, 'FloatBorder', {
@@ -62,6 +65,8 @@ use({
     -- })
 
     -- vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
+    vim.api.nvim_set_hl(0, 'DiffAdd', { cterm = none })
+    vim.api.nvim_set_hl(0, 'DiffDelete', { cterm = none })
 
     -- vim.api.nvim_set_hl(0, 'StatusLineNonText', {
     --   fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
@@ -226,7 +231,14 @@ use({
     vim.keymap.set('n', 'gp', ':Gitsigns preview_hunk<CR>')
     vim.keymap.set('n', 'gb', ':Gitsigns blame_line<CR>')
 
-    vim.cmd('highlight DiffAdd gui=bold')
+    -- vim.cmd([[
+    --   highlight DiffAdd cterm=none gui=none
+    --   highlight DiffDelete cterm=none gui=none
+    -- ]])
+    --
+    -- vim.cmd('highlight DiffDelete cterm=none gui=none')
+    -- vim.api.nvim_set_hl(0, 'DiffAdd', { ctermfg = 'none', ctermbg = 'none', fg = '#c3e88d' })
+    -- vim.api.nvim_set_hl(0, 'DiffDelete', { cterm = 'none', fg = '#f07178' })
   end,
 })
 
@@ -261,6 +273,7 @@ use({
   requires = {
     'JoosepAlviste/nvim-ts-context-commentstring',
     'nvim-treesitter/nvim-treesitter-textobjects',
+    'windwp/nvim-ts-autotag',
   },
   config = function()
     require('user/plugins/treesitter')
