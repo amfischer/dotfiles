@@ -313,6 +313,13 @@ use({
   end,
 })
 
+use { 'otavioschwanck/arrow.nvim', config = function()
+  require('arrow').setup({
+    show_icons = true,
+    leader_key = ';' -- Recommended to be a single key
+  })
+end }
+
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
 if packer_bootstrap then

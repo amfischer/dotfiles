@@ -51,6 +51,7 @@ require('telescope').setup({
     },
     oldfiles = {
       prompt_title = 'History',
+      only_cwd = true
     },
     lsp_references = {
       previewer = false,
