@@ -5,7 +5,12 @@ require('mason-lspconfig').setup({ automatic_installation = true })
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- PHP
-require('lspconfig').intelephense.setup({ capabilities = capabilities })
+require('lspconfig').intelephense.setup({
+  capabilities = capabilities,
+  init_options = {
+    licenceKey = '/home/aaron/intelephense/licence.txt'
+  }
+})
 
 -- Vue, JavaScript, TypeScript
 require('lspconfig').volar.setup({
@@ -37,11 +42,10 @@ vim.keymap.set('n', 'gi', ':Telescope lsp_implementations<CR>')
 vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>')
 vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
+vim.keymap.set('n', '<Leader><CR>', '<cmd>lua vim.lsp.buf.code_action()<CR>')
 
 -- change bg color to floating popup
 -- vim.cmd('highlight NormalFloat guibg=#314549')
-
-vim.cmd('highlight FloatermBorder guifg=#ffffff guibg=#ffffff')
 
 -- vim.cmd([[
 --   highlight link NormalFloat CursorLineBg

@@ -41,7 +41,7 @@ require('lualine').setup({
       '"Spaces:" .. vim.bo.shiftwidth',
     },
     lualine_z = {
-      -- 'location',
+      'location',
       -- 'progress',
     },
   },

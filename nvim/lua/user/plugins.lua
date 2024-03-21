@@ -26,6 +26,16 @@ local use = require('packer').use
 -- Packer can manage itself.
 use('wbthomason/packer.nvim')
 
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--   pattern = "*",
+--   callback = function()
+--     vim.api.nvim_set_hl(0, 'FloatBorder', {
+--       fg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
+--       bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
+--     })
+--   end,
+-- })
+
 -- Color scheme: catppuccin
 -- use('catppuccin/nvim')
 -- vim.cmd.colorscheme "catppuccin"
@@ -45,19 +55,25 @@ use({
       "nvim-web-devicons",
       "telescope"
     }
-    contrast = {
-      floating_windows = true
-    }
+    -- contrast = {
+    --   floating_windows = true
+    -- }
   end,
   config = function()
     vim.g.material_style = "oceanic" 
     vim.cmd('colorscheme material')
 
-    -- vim.api.nvim_set_hl(0, 'FloatBorder', {
-    --   fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
-    --   bg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
-    -- })
+    vim.api.nvim_set_hl(0, 'NormalFloat', {
+      -- fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
+      bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
+    })
 
+    vim.api.nvim_set_hl(0, 'FloatBorder', {
+      fg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
+      bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
+    })
+
+    vim.cmd('highlight FloatBorder guifg=#b0bec5 guibg=#314549')
     -- Make the cursor line background invisible
     -- vim.api.nvim_set_hl(0, 'CursorLineBg', {
     --   fg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
@@ -67,11 +83,6 @@ use({
     -- vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
     vim.api.nvim_set_hl(0, 'DiffAdd', { cterm = none })
     vim.api.nvim_set_hl(0, 'DiffDelete', { cterm = none })
-
-    -- vim.api.nvim_set_hl(0, 'StatusLineNonText', {
-    --   fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
-    --   bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
-    -- })
 
     vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
   end
@@ -260,10 +271,15 @@ use({
     -- vim.g.floaterm_wintype = 'split'
     vim.keymap.set('n', '<F1>', ':FloatermToggle<CR>')
     vim.keymap.set('t', '<F1>', '<C-\\><C-n>:FloatermToggle<CR>')
-    -- vim.cmd([[
-    --   highlight link Floaterm CursorLine
-    --   highlight link FloatermBorder CursorLineBg
-    -- ]])
+    vim.cmd([[
+      highlight link Floaterm StatusLine
+      " highlight link FloatermBorder StatusLine
+    ]])
+
+    vim.api.nvim_set_hl(0, 'FloatermBorder', {
+      fg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
+      bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
+    })
   end
 })
 
@@ -335,6 +351,31 @@ use { 'otavioschwanck/arrow.nvim', config = function()
     leader_key = ';' -- Recommended to be a single key
   })
 end }
+
+
+use({
+  'dense-analysis/ale',
+  setup = function()
+    vim.g.ale_fixers = {
+      javascript = {'prettier'},
+      vue = {'prettier'},
+      php = {'pint'},
+    }
+    -- can't get pint to use the executable in the docker image
+    -- vim.g.ale_php_pint_use_global = 1
+    -- vim.g.ale_php_pint_executable = '/home/aaron/projects/coid-app/vendor/bin/pint'
+    -- vim.g.ale_filename_mappings = {
+    --   pint = {
+    --     '/home/aaron/projects/coid-app',
+    --     '/var/www/html'
+    --   }
+    -- }
+  end,
+  config = function()
+    vim.keymap.set('n', '<A-p>', ':ALEFix<CR>')
+  end,
+})
+
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins

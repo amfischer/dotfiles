@@ -66,6 +66,8 @@ vim.keymap.set('n', '<C-p><C-s>', ':PackerSync<CR>')
 -- vim.keymap.set('n', '<C-K>', '<C-W><C-K>')
 
 vim.keymap.set('n', '<A-d>', ':t.<CR>')
+vim.keymap.set('n', '<A-y>', ':d<CR>')
 
+vim.keymap.set('n', 'fp', ':silent %!vendor/laravel/sail/bin/sail npx prettier --write --stdin-filepath %<CR>')
 
 
