@@ -353,28 +353,34 @@ use { 'otavioschwanck/arrow.nvim', config = function()
 end }
 
 
-use({
-  'dense-analysis/ale',
-  setup = function()
-    vim.g.ale_fixers = {
-      javascript = {'prettier'},
-      vue = {'prettier'},
-      php = {'pint'},
-    }
-    -- can't get pint to use the executable in the docker image
-    -- vim.g.ale_php_pint_use_global = 1
-    -- vim.g.ale_php_pint_executable = '/home/aaron/projects/coid-app/vendor/bin/pint'
-    -- vim.g.ale_filename_mappings = {
-    --   pint = {
-    --     '/home/aaron/projects/coid-app',
-    --     '/var/www/html'
-    --   }
-    -- }
-  end,
-  config = function()
-    vim.keymap.set('n', '<A-p>', ':ALEFix<CR>')
-  end,
-})
+-- use({
+--   'dense-analysis/ale',
+--   setup = function()
+--     vim.g.ale_fixers = {
+--       javascript = {'prettier'},
+--       vue = {'prettier'},
+--       php = {'pint'},
+--     }
+
+--     vim.g.ale_lint_on_enter = 0
+--     vim.g.ale_lint_on_filetype_changed = 0
+--     vim.g.ale_lint_on_insert_leave = 0
+--     vim.g.ale_lint_on_save = 0
+
+--     -- can't get pint to use the executable in the docker image
+--     -- vim.g.ale_php_pint_use_global = 1
+--     -- vim.g.ale_php_pint_executable = '/home/aaron/projects/coid-app/vendor/bin/pint'
+--     -- vim.g.ale_filename_mappings = {
+--     --   pint = {
+--     --     '/home/aaron/projects/coid-app',
+--     --     '/var/www/html'
+--     --   }
+--     -- }
+--   end,
+--   config = function()
+--     vim.keymap.set('n', '<A-p>', ':ALEFix<CR>')
+--   end,
+-- })
 
 
 -- Automatically set up your configuration after cloning packer.nvim
