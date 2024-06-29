@@ -4,9 +4,8 @@ alias kkl='cd .. && ls -la'
 alias ..='cd .. && ls -la'
 alias ex.='explorer.exe .'
 alias ll='ls -lah'
-alias v='~/nvim.appimage'
+alias v='NVIM_APPNAME="nvim-altair" ~/nvim.appimage'
 alias vl='NVIM_APPNAME="nvim-laracasts" ~/nvim.appimage'
-alias vk='NVIM_APPNAME="nvim-kickstart" ~/nvim.appimage'
 
 alias rgf='rg --files | rg'
 
@@ -50,3 +49,4 @@ alias drop_cache="sudo sh -c \"echo 3 >'/proc/sys/vm/drop_caches' && swapoff -a 
 
 # SCP & download RENAV legacy csv
 alias renavscp='scp root@146.190.148.249:/var/www/vhosts/renav.com/httpdocs/mls/grid/data/property_missingDbColumns.csv /home/aaron/property_missingDbColumns.csv'
+
