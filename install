@@ -3,6 +3,8 @@
 DOTFILES=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd) 
 
 # rm -rf $HOME/.config/nvim
-ln -s $DOTFILES/nvim $HOME/.config/nvim-laracasts
+ln -s $DOTFILES/nvim-packer $HOME/.config/nvim-laracasts
+
+ln -s $DOTFILES/nvim-lazy $HOME/.config/nvim-altair
 
 ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
