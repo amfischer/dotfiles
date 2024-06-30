@@ -42,6 +42,8 @@ require("lazy").setup({
     -- "gc" to comment visual regions/lines
     { "numToStr/Comment.nvim", opts = {} },
 
+    { "windwp/nvim-autopairs", opts = {} },
+
     -- Git commands.
     {
         "tpope/vim-fugitive",
@@ -86,6 +88,15 @@ require("lazy").setup({
             -- Instead of this running every time we open a file, we'll just run it once when Vim starts.
             vim.g.rooter_manual_only = 1
             vim.cmd("Rooter")
+        end,
+    },
+
+    {
+        "AndrewRadev/splitjoin.vim",
+        config = function()
+            vim.g.splitjoin_html_attributes_bracket_on_new_line = 1
+            vim.g.splitjoin_trailing_comma = 1
+            vim.g.splitjoin_php_method_chain_full = 1
         end,
     },
 
