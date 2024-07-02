@@ -31,6 +31,11 @@ require("lazy").setup({
 
     { "windwp/nvim-autopairs", opts = {} },
 
+    {
+        "whatyouhide/vim-textobj-xmlattr",
+        dependencies = { "kana/vim-textobj-user" },
+    },
+
     -- Git commands.
     {
         "tpope/vim-fugitive",
@@ -107,7 +112,7 @@ require("lazy").setup({
             vim.g.ale_linters = {
                 php = {},
                 javascript = { "eslint" },
-                vue = { "eslint" },
+                vue = {},
                 css = {},
                 lua = {},
             }
@@ -127,10 +132,21 @@ require("lazy").setup({
     {
         "hrsh7th/nvim-cmp",
         dependencies = {
+            {
+                "L3MON4D3/LuaSnip",
+                build = "make install_jsregexp",
+                dependencies = {
+                    {
+                        "rafamadriz/friendly-snippets",
+                        config = function()
+                            require("luasnip.loaders.from_vscode").lazy_load()
+                        end,
+                    },
+                },
+            },
+            "saadparwaiz1/cmp_luasnip",
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-path",
-            "L3MON4D3/LuaSnip",
-            "saadparwaiz1/cmp_luasnip",
         },
     },
 
@@ -147,6 +163,8 @@ require("lazy").setup({
     require("plugins/lualine"),
 
     require("plugins/lspconfig"),
+
+    require("plugins/cmp"),
 }, {
     ui = {
         -- If you are using a Nerd Font: set icons to an empty table which will use the
