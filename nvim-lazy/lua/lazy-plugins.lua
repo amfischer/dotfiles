@@ -126,6 +126,9 @@ require("lazy").setup({
         main = "ibl",
         opts = {
             whitespace = { highlight = { "Whitespace", "NonText" } },
+            indent = {
+                repeat_linebreak = false,
+            },
         },
     },
 
@@ -134,12 +137,17 @@ require("lazy").setup({
         dependencies = {
             {
                 "L3MON4D3/LuaSnip",
+                version = "v2.*",
                 build = "make install_jsregexp",
                 dependencies = {
                     {
                         "rafamadriz/friendly-snippets",
                         config = function()
                             require("luasnip.loaders.from_vscode").lazy_load()
+                            require("luasnip.loaders.from_vscode").lazy_load({
+                                paths = "~/projects/dotfiles/nvim-lazy/lua/snippets",
+                            })
+                            -- require("luasnip.loaders.from_vscode").load_standalone({ path = "~/projects/dotfiles/nvim-lazy/lua/extra.code-snippets" })
                         end,
                     },
                 },

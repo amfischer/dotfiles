@@ -1,0 +1,16 @@
+{
+    "vue-snippet": {
+        "prefix": "sfc",
+        "body": [
+            "<script setup>",
+            "$1",
+            "</script>",
+            "",
+            "<template>",
+            "$2",
+            "</template>",
+        ],
+        "description": "Vue Single File Component",
+        "scope": "vue"
+    }
+}

@@ -59,6 +59,7 @@ vim.keymap.set("n", "<A-0>", ":bnext<CR>")
 
 -- Save file more easily
 vim.keymap.set("n", "<C-s>", ":w<CR>")
+vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>")
 
 -- Switch windows more easily
 -- vim.keymap.set('n', '<C-H>', '<C-W><C-H>')

@@ -1,0 +1,15 @@
+{
+    "Vue Single File Component": {
+        "prefix": "sfc",
+        "body": [
+            "<script setup>",
+            "$1",
+            "</script>",
+            "",
+            "<template>",
+            "$2",
+            "</template>",
+        ],
+        "description": "Vue3 Single File Component"
+    }
+}
