@@ -9,6 +9,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     end,
 })
 
+-- open diagnositc float
+vim.keymap.set("n", "J", vim.diagnostic.open_float)
+
 -- When text is wrapped, move by terminal rows, not lines, unless a count is provided.
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })

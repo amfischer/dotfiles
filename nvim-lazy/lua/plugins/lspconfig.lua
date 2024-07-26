@@ -120,7 +120,9 @@ return {
                     -- },
                 },
 
-                tailwindcss = {},
+                tailwindcss = {
+                    filetypes = { "html", "vue", "typescript" },
+                },
 
                 jsonls = {
                     settings = {
