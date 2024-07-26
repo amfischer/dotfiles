@@ -144,6 +144,17 @@ require("lazy").setup({
     },
 
     {
+        "akinsho/bufferline.nvim",
+        version = "*",
+        dependencies = "nvim-tree/nvim-web-devicons",
+        opts = {
+            options = {
+                separator_style = "slant",
+            },
+        },
+    },
+
+    {
         "hrsh7th/nvim-cmp",
         dependencies = {
             {
