@@ -102,11 +102,22 @@ require("lazy").setup({
     },
 
     {
+        "otavioschwanck/arrow.nvim",
+        opts = {
+            show_icons = true,
+            leader_key = "<leader>j",
+            buffer_leader_key = "m",
+        },
+    },
+
+    {
         "dense-analysis/ale",
         config = function()
             vim.g.ale_fixers = {
                 javascript = { "prettier" },
                 vue = { "prettier" },
+                css = { "prettier" },
+                blade = { "prettier" },
                 lua = { "stylua" },
             }
             vim.g.ale_linters = {
