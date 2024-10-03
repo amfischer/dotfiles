@@ -34,7 +34,7 @@ return {
 
             -- Fuzzy find all the symbols in your current document.
             --  Symbols are things like variables, functions, types, etc.
-            vim.keymap.set("n", "<leader>ds", require("telescope.builtin").lsp_document_symbols)
+            vim.keymap.set("n", "<leader>s", require("telescope.builtin").lsp_document_symbols)
 
             -- Fuzzy find all the symbols in your current workspace.
             --  Similar to document symbols, except searches over your entire project.
@@ -42,11 +42,11 @@ return {
 
             -- Rename the variable under your cursor.
             --  Most Language Servers support renaming across files, etc.
-            vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+            vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
 
             -- Execute a code action, usually your cursor needs to be on top of an error
             -- or a suggestion from your LSP for this to activate.
-            vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+            vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action)
 
             -- Opens a popup that displays documentation about the word under your cursor
             --  See `:help K` for why this keymap.
@@ -98,7 +98,7 @@ return {
                     },
                 },
 
-                tsserver = {
+                ts_ls = {
                     init_options = {
                         plugins = {
                             {

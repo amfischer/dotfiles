@@ -28,6 +28,9 @@ vim.keymap.set("v", "y", "myy`y")
 
 -- Paste replace visual selection without copying it.
 -- vim.keymap.set('v', 'p', '"_dP')
+
+vim.keymap.set("i", "<C-Del>", "<C-o>dw")
+
 --
 -- Easy insertion of a trailing ; or , from insert mode.
 vim.keymap.set("i", ";;", "<Esc>A;")
@@ -50,11 +53,11 @@ vim.keymap.set("v", "<A-j>", ":move '>+1<CR>gv=gv")
 vim.keymap.set("v", "<A-k>", ":move '<-2<CR>gv=gv")
 
 -- Open and close window splits
-vim.keymap.set("n", "<Leader>s", ":split<CR>")
-vim.keymap.set("n", "<Leader>v", ":vs<CR>")
+vim.keymap.set("n", "<Leader>hh", ":split<CR>")
+vim.keymap.set("n", "<Leader>vv", ":vs<CR>")
 -- vim.keymap.set('n', '<Leader>Q', '<C-w>q')
-vim.keymap.set("n", "<Leader>cs", ":close<CR>")
-vim.keymap.set("n", "<Leader>db", ":bdelete<CR>")
+vim.keymap.set("n", "<Leader>cc", ":close<CR>")
+vim.keymap.set("n", "<Leader>dd", ":bdelete<CR>")
 
 -- Switch between buffers
 vim.keymap.set("n", "<A-9>", ":bprevious<CR>")
@@ -74,3 +77,7 @@ vim.keymap.set("n", "<A-d>", ":t.<CR>")
 vim.keymap.set("n", "<A-y>", ":d<CR>")
 
 -- vim.keymap.set('n', 'fp', ':silent %!vendor/laravel/sail/bin/sail npx prettier --write --stdin-filepath %<CR>')
+
+-- change delete previous word
+vim.keymap.set("i", "<C-BS>", "<C-W>")
+

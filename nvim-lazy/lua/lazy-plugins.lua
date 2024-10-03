@@ -118,6 +118,7 @@ require("lazy").setup({
                 vue = { "prettier" },
                 css = { "prettier" },
                 blade = { "prettier" },
+                html = { "prettier" },
                 lua = { "stylua" },
             }
             vim.g.ale_linters = {
@@ -145,6 +146,7 @@ require("lazy").setup({
 
     {
         "akinsho/bufferline.nvim",
+        enabled = false,
         version = "*",
         dependencies = "nvim-tree/nvim-web-devicons",
         opts = {
