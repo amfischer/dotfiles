@@ -17,6 +17,12 @@ return {
                       end,
                     },
                 },
+                config = function()
+                    -- vim.lsp.set_log_level("info")
+                    require('luasnip.loaders.from_vscode').lazy_load({
+                      paths = "~/projects/dotfiles/nvim-lazy/lua/snippets/",
+                    })
+                end,
             },
             "saadparwaiz1/cmp_luasnip",
 

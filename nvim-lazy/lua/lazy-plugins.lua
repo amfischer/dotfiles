@@ -156,32 +156,6 @@ require("lazy").setup({
         },
     },
 
-    {
-        "hrsh7th/nvim-cmp",
-        dependencies = {
-            {
-                "L3MON4D3/LuaSnip",
-                version = "v2.*",
-                build = "make install_jsregexp",
-                dependencies = {
-                    {
-                        "rafamadriz/friendly-snippets",
-                        config = function()
-                            require("luasnip.loaders.from_vscode").lazy_load()
-                            require("luasnip.loaders.from_vscode").lazy_load({
-                                paths = "~/projects/dotfiles/nvim-lazy/lua/snippets",
-                            })
-                            -- require("luasnip.loaders.from_vscode").load_standalone({ path = "~/projects/dotfiles/nvim-lazy/lua/extra.code-snippets" })
-                        end,
-                    },
-                },
-            },
-            "saadparwaiz1/cmp_luasnip",
-            "hrsh7th/cmp-nvim-lsp",
-            "hrsh7th/cmp-path",
-        },
-    },
-
     require("plugins/vim-tmux-navigator"),
 
     require("plugins/oil"),

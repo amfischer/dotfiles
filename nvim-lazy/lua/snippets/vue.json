@@ -8,7 +8,7 @@
             "",
             "<template>",
             "$2",
-            "</template>",
+            "</template>"
         ],
         "description": "Vue3 Single File Component"
     }
