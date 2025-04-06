@@ -9,9 +9,29 @@
 #Numpad6::Send "#{6}"
 
 
-#Numpad1::Run "C:\Users\amfis\AppData\Local\TogglDesktop\TogglDesktop.exe"
+#Numpad1::
+{
+  if WinExist("ahk_exe chrome.exe")
+    WinActivate
+  else
+    Run "C:\Program Files\Google\Chrome\Application\chrome.exe"
+}
 
-#Numpad2::Run "C:\Program Files\Alacritty\alacritty.exe"
+#Numpad2::
+{
+  if WinExist("ahk_exe alacritty.exe")
+    WinActivate
+  else
+    Run "C:\Program Files\Alacritty\alacritty.exe"
+}
+
+#Numpad3::
+{
+  if WinExist("ahk_exe Code.exe")
+    WinActivate
+  else
+    Run "C:\Users\Aaron\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+}
 
 
 #c::
