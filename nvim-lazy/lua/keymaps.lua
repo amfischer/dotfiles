@@ -27,9 +27,12 @@ vim.keymap.set("v", "y", "myy`y")
 -- vim.keymap.set('n', 'q:', ':q')
 
 -- Paste replace visual selection without copying it.
--- vim.keymap.set('v', 'p', '"_dP')
+vim.keymap.set('v', 'p', '"_dP')
 
 vim.keymap.set("i", "<C-Del>", "<C-o>dw")
+
+-- Easier way to leave insert mode
+vim.keymap.set("i", "jj", "<Esc>");
 
 --
 -- Easy insertion of a trailing ; or , from insert mode.

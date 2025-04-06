@@ -1,7 +1,7 @@
 return {
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
-    dependencies = { 
+    dependencies = {
         'nvim-lua/plenary.nvim',
         'nvim-tree/nvim-web-devicons',
         'nvim-telescope/telescope-live-grep-args.nvim',
@@ -47,7 +47,14 @@ return {
                 },
                 oldfiles = {
                     prompt_title = 'History',
-                    only_cwd = true
+                    only_cwd = true,
+                    previewer = false,
+                    -- history = {
+                    --     limit = 5,
+                    -- },
+                    layout_config = {
+                        width = 80,
+                    },
                 },
                 lsp_references = {
                     previewer = false,
@@ -62,7 +69,7 @@ return {
         local builtin = require 'telescope.builtin'
         local action_state = require 'telescope.actions.state'
         vim.keymap.set('n', '<A-n>', builtin.find_files)
-        vim.keymap.set('n', '<leader>h', builtin.oldfiles)
+        vim.keymap.set('n', '<A-h>', builtin.oldfiles)
         vim.keymap.set('n', '<A-m>', builtin.lsp_document_symbols)
 
         -- https://github.com/nvim-telescope/telescope.nvim/issues/621
