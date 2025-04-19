@@ -154,6 +154,12 @@ require("lazy").setup({
                 separator_style = "slant",
             },
         },
+        config = function(_, opts)
+            require("bufferline").setup(opts)
+
+            vim.keymap.set("n", "<A-(>", ":BufferLineMovePrev<CR>")
+            vim.keymap.set("n", "<A-)>", ":BufferLineMoveNext<CR>")
+        end
     },
 
     require("plugins/vim-tmux-navigator"),
