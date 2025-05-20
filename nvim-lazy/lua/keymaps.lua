@@ -63,8 +63,8 @@ vim.keymap.set("n", "<Leader>cc", ":close<CR>")
 vim.keymap.set("n", "<Leader>dd", ":bdelete<CR>")
 
 -- Switch between buffers
-vim.keymap.set("n", "<A-9>", ":bprevious<CR>")
-vim.keymap.set("n", "<A-0>", ":bnext<CR>")
+-- vim.keymap.set("n", "<A-9>", ":bprevious<CR>")
+-- vim.keymap.set("n", "<A-0>", ":bnext<CR>")
 
 -- Save file more easily
 vim.keymap.set("n", "<C-s>", ":w<CR>")
