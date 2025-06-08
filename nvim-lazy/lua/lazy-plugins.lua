@@ -31,6 +31,8 @@ require("lazy").setup({
 
     { "windwp/nvim-autopairs", opts = {} },
 
+    { "karb94/neoscroll.nvim", opts = {} },
+
     {
         "whatyouhide/vim-textobj-xmlattr",
         dependencies = { "kana/vim-textobj-user" },
