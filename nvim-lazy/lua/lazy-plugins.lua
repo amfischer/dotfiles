@@ -204,6 +204,9 @@ require("lazy").setup({
                 -- },
             })
 
+            vim.keymap.set("n", "<leader>tf", function()
+                require("neotest").run.run(vim.fn.expand("%"))
+            end)
             vim.keymap.set("n", "<leader>tn", ":Neotest run<CR>")
             vim.keymap.set("n", "<F3>", ":Neotest output-panel<CR>")
         end,
