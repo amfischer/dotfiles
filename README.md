@@ -4,3 +4,6 @@
   - open command prompt and navigate to `C:\Users\<UserName>\`
   - enter `type nul > .wslconfig`
 - https://learn.microsoft.com/en-us/windows/wsl/wsl-config
+
+### Neovim Plugins
+- [vim-eunuch](https://github.com/tpope/vim-eunuch)
