@@ -2,9 +2,19 @@
 
 DOTFILES=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd) 
 
+# Neovim
 # rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim-packer $HOME/.config/nvim-laracasts
-
 ln -s $DOTFILES/nvim-lazy $HOME/.config/nvim-altair
 
+# Tmux
 ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
+
+ln -sf $DOTFILES/tmux/sessions/coid.sh $HOME/coid_session.sh
+ln -sf $DOTFILES/tmux/sessions/dotfiles.sh $HOME/dotfiles_session.sh
+ln -sf $DOTFILES/tmux/sessions/kahtoola.sh $HOME/kahtoola_session.sh
+ln -sf $DOTFILES/tmux/sessions/money.sh $HOME/money_session.sh
+ln -sf $DOTFILES/tmux/sessions/renav.sh $HOME/renav_session.sh
+ln -sf $DOTFILES/tmux/sessions/talon.sh $HOME/talon_session.sh
+
+chmod 744 -R $DOTFILES/tmux/sessions
