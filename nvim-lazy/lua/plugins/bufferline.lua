@@ -1,3 +1,6 @@
+-- Display buffers or tabs as visual tabs in TUI
+-- https://github.com/akinsho/bufferline.nvim
+
 return {
     "akinsho/bufferline.nvim",
     enabled = true,

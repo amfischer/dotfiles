@@ -1,3 +1,6 @@
+-- Git commands
+-- https://github.com/tpope/vim-fugitive
+
 return {
     "tpope/vim-fugitive",
     dependencies = { "tpope/vim-rhubarb" },

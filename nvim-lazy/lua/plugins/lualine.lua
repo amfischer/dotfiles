@@ -1,52 +1,55 @@
+-- Status line
+-- https://github.com/nvim-lualine/lualine.nvim
+
 return {
-    'nvim-lualine/lualine.nvim',
+    "nvim-lualine/lualine.nvim",
     dependencies = {
-        'nvim-tree/nvim-web-devicons',
+        "nvim-tree/nvim-web-devicons",
     },
     opts = {
         options = {
             section_separators = '"| "',
-            component_separators = '',
+            component_separators = "",
             globalstatus = true,
-            -- theme = 'material-nvim', 
+            -- theme = 'material-nvim',
             theme = {
                 normal = {
-                    a = 'StatusLine',
-                    b = 'StatusLine',
-                    c = 'StatusLine',
+                    a = "StatusLine",
+                    b = "StatusLine",
+                    c = "StatusLine",
                 },
             },
         },
         sections = {
             lualine_a = {
-                'mode',
+                "mode",
             },
             lualine_b = {
-                'branch',
-                'diff',
+                "branch",
+                "diff",
                 -- '"??  " .. tostring(#vim.tbl_keys(vim.lsp.buf_get_clients()))',
-                { 'diagnostics', sources = { 'nvim_diagnostic' } },
+                { "diagnostics", sources = { "nvim_diagnostic" } },
             },
             lualine_c = {
                 {
-                    'filename',
+                    "filename",
                     file_status = true,
-                    path = 1
-                }
+                    path = 1,
+                },
             },
             lualine_x = {
-                'filetype',
-                'encoding',
-                'fileformat',
+                "filetype",
+                "encoding",
+                "fileformat",
             },
             lualine_y = {
                 -- '(vim.bo.expandtab and "? " or "? ") .. " " .. vim.bo.shiftwidth',
                 '"Spaces:" .. vim.bo.shiftwidth',
             },
             lualine_z = {
-                'location',
+                "location",
                 -- 'progress',
             },
         },
-    }
+    },
 }

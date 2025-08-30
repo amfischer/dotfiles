@@ -1,3 +1,6 @@
+-- Configure and manage formatters & linters
+-- https://github.com/dense-analysis/ale
+
 return {
     "dense-analysis/ale",
     init = function()

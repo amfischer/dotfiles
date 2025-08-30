@@ -1,4 +1,5 @@
 -- Automatically set the working directory to the project root.
+-- https://github.com/airblade/vim-rooter
 
 return {
     "airblade/vim-rooter",

@@ -1,4 +1,7 @@
--- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+-- Colorscheme
+-- https://github.com/folke/tokyonight.nvim
+
+-- To see what colorschemes are already installed, try `:Telescope colorscheme`.
 
 return {
     "folke/tokyonight.nvim",
