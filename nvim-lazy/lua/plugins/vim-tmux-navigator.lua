@@ -1,3 +1,6 @@
+-- Navigate seamlessly between Vim windows and Tmux panes.
+-- https://github.com/christoomey/vim-tmux-navigator
+
 return {
     "christoomey/vim-tmux-navigator",
     cmd = {

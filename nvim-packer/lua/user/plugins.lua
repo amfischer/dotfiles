@@ -88,8 +88,6 @@ use({
   end
 })
 
-use('tpope/vim-eunuch')
-
 -- Commenting support.
 use('tpope/vim-commentary')
 
@@ -97,7 +95,7 @@ use('tpope/vim-commentary')
 use('tpope/vim-surround')
 
 -- Useful commands like :Rename and :SudoWrite.
--- use('tpope/vim-eunuch')
+use('tpope/vim-eunuch')
 
 -- Pairs of handy bracket mappings, like [b and ]b.
 use('tpope/vim-unimpaired')
