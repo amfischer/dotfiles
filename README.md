@@ -14,6 +14,16 @@
 - [vim-repeat](https://github.com/tpope/vim-repeat)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [vim-textobj-xmlattr](https://github.com/whatyouhide/vim-textobj-xmlattr)
+- [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+- [splitjoin.vim](https://github.com/AndrewRadev/splitjoin.vim)
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+- [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+- [neotest](https://github.com/nvim-neotest/neotest)
+- [oil.nvim](https://github.com/stevearc/oil.nvim)
 
 ##### Optional
 - [vim-sleuth](https://github.com/tpope/vim-sleuth)
@@ -23,6 +33,16 @@
 - [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
 - [vim-lastplace](https://github.com/farmergreg/vim-lastplace)
 - [vim-heritage](https://github.com/jessarcher/vim-heritage)
+- [vim-rooter](https://github.com/airblade/vim-rooter)
+- [neoscroll.nvim](https://github.com/karb94/neoscroll.nvim)
+- [vim-pasta](https://github.com/ku1ik/vim-pasta)
+- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
+- [vim-floaterm](https://github.com/voldikss/vim-floaterm)
+- [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
+- [arrow.nvim](https://github.com/otavioschwanck/arrow.nvim)
+- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [leap.nvim](https://github.com/ggandor/leap.nvim)
+- [ale](https://github.com/dense-analysis/ale)
 
 ### Tmux Plugins
 - [tmux-fingers](https://github.com/Morantron/tmux-fingers)
