@@ -23,8 +23,10 @@
 - [vim-eunuch](https://github.com/tpope/vim-eunuch)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [vim-repeat](https://github.com/tpope/vim-repeat)
+- [vim-rooter](https://github.com/airblade/vim-rooter)
 - [vim-surround](https://github.com/tpope/vim-surround)
 - [vim-textobj-xmlattr](https://github.com/whatyouhide/vim-textobj-xmlattr)
+- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
 - [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
 
 ##### Optional
@@ -40,9 +42,7 @@
 - [vim-lastplace](https://github.com/farmergreg/vim-lastplace)
 - [vim-pasta](https://github.com/ku1ik/vim-pasta)
 - [vim-polygot](https://github.com/sheerun/vim-polyglot)
-- [vim-rooter](https://github.com/airblade/vim-rooter)
 - [vim-sleuth](https://github.com/tpope/vim-sleuth)
-- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
 - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 
 ### Tmux Plugins
