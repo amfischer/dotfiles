@@ -8,7 +8,8 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 
 vim.opt.number = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
+vim.opt.cursorline = true
 
 vim.opt.wildmode = 'longest:full,full' -- complete the longest common match, and allow tabbing the results to fully complete them
 vim.opt.completeopt = 'menuone,longest,preview'
