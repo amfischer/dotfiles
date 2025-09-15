@@ -8,17 +8,17 @@ return {
     },
     opts = {
         options = {
-            section_separators = '"| "',
-            component_separators = "",
+            -- section_separators = '"| "',
+            -- component_separators = "",
             globalstatus = true,
-            -- theme = 'material-nvim',
-            theme = {
-                normal = {
-                    a = "StatusLine",
-                    b = "StatusLine",
-                    c = "StatusLine",
-                },
-            },
+            theme = "tokyonight",
+            -- theme = {
+            --     normal = {
+            --         a = "StatusLine",
+            --         b = "StatusLine",
+            --         c = "StatusLine",
+            --     },
+            -- },
         },
         sections = {
             lualine_a = {
