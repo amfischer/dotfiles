@@ -29,6 +29,7 @@ require("lazy").setup({
     require("plugins/tokyonight"),
     require("plugins/treesitter"),
     require("plugins/vim-tmux-navigator"),
+    require("plugins/web-devicons"),
 }, {
     ui = {
         -- If you are using a Nerd Font: set icons to an empty table which will use the
