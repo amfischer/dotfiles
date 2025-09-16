@@ -19,6 +19,7 @@ require("lazy").setup({
     require("plugins/leap"),
     require("plugins/lspconfig"),
     require("plugins/lualine"),
+    require("plugins/mini"),
     require("plugins/neotest"),
     require("plugins/oil"),
     require("plugins/rooter"),

@@ -29,12 +29,12 @@ vim.keymap.set("v", "y", "myy`y")
 -- Paste replace visual selection without copying it.
 vim.keymap.set('v', 'p', '"_dP')
 
+-- Delete word forward in insert mode
 vim.keymap.set("i", "<C-Del>", "<C-o>dw")
 
 -- Easier way to leave insert mode
 vim.keymap.set("i", "jj", "<Esc>");
 
---
 -- Easy insertion of a trailing ; or , from insert mode.
 vim.keymap.set("i", ";;", "<Esc>A;")
 vim.keymap.set("i", ",,", "<Esc>A,")
@@ -60,7 +60,7 @@ vim.keymap.set("n", "<Leader>hh", ":split<CR>")
 vim.keymap.set("n", "<Leader>vv", ":vs<CR>")
 -- vim.keymap.set('n', '<Leader>Q', '<C-w>q')
 vim.keymap.set("n", "<Leader>cc", ":close<CR>")
-vim.keymap.set("n", "<Leader>dd", ":bdelete<CR>")
+-- vim.keymap.set("n", "<Leader>dd", ":bdelete<CR>")
 
 -- Switch between buffers
 -- vim.keymap.set("n", "<A-9>", ":bprevious<CR>")
