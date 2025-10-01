@@ -8,6 +8,7 @@ return {
             javascript = { "prettier" },
             vue = { "prettier" },
             css = { "prettier" },
+            scss = { "prettier" },
             blade = { "prettier" },
             html = { "prettier" },
             lua = { "stylua" },
@@ -17,6 +18,8 @@ return {
             javascript = { "eslint" },
             vue = {},
             css = {},
+            scss = {},
+            html = {},
             lua = {},
         }
         vim.g.ale_disable_lsp = 1
