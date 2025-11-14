@@ -16,6 +16,9 @@ if [ $? != 0 ]; then
   # Code window
   tmux new-window -t $SESSION -n code -c "$WORKDIR"
 
+  # Claude window
+  tmux new-window -t $SESSION -n claude -c "$WORKDIR"
+
   # switch to node LTS v20 and check stencil version
   tmux set-hook -t "$SESSION" client-attached \
     "run-shell 'sleep 3; \
