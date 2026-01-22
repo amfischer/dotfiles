@@ -25,6 +25,7 @@ alias money='cd ~/projects/expense-tracker/'
 alias coid='cd ~/projects/coid-app/'
 alias zen='cd ~/projects/modernzen/'
 alias mob='cd ~/projects/moblify/'
+alias dot='cd ~/projects/dotfiles/'
 
 # Docker Commands
 alias dcu='docker-compose up'

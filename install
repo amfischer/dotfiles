@@ -22,3 +22,4 @@ chmod 744 -R $DOTFILES/tmux/sessions
 
 # zsh
 ln -sf $DOTFILES/zsh/aliases.zsh $HOME/.oh-my-zsh/custom/aliases.zsh
+ln -sf $DOTFILES/zsh/env.zsh $HOME/.oh-my-zsh/custom/env.zsh
