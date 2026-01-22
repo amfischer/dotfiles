@@ -16,5 +16,9 @@ ln -sf $DOTFILES/tmux/sessions/kahtoola.sh $HOME/kahtoola_session.sh
 ln -sf $DOTFILES/tmux/sessions/money.sh $HOME/money_session.sh
 ln -sf $DOTFILES/tmux/sessions/renav.sh $HOME/renav_session.sh
 ln -sf $DOTFILES/tmux/sessions/talon.sh $HOME/talon_session.sh
+ln -sf $DOTFILES/tmux/sessions/moblify.sh $HOME/moblify_session.sh
 
 chmod 744 -R $DOTFILES/tmux/sessions
+
+# zsh
+ln -sf $DOTFILES/zsh/aliases.zsh $HOME/.oh-my-zsh/custom/aliases.zsh
