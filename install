@@ -15,6 +15,7 @@ ln -sf $DOTFILES/tmux/sessions/dotfiles.sh $HOME/dotfiles_session.sh
 ln -sf $DOTFILES/tmux/sessions/kahtoola.sh $HOME/kahtoola_session.sh
 ln -sf $DOTFILES/tmux/sessions/money.sh $HOME/money_session.sh
 ln -sf $DOTFILES/tmux/sessions/renav.sh $HOME/renav_session.sh
+ln -sf $DOTFILES/tmux/sessions/renavtitle.sh $HOME/renavtitle_session.sh
 ln -sf $DOTFILES/tmux/sessions/talon.sh $HOME/talon_session.sh
 ln -sf $DOTFILES/tmux/sessions/moblify.sh $HOME/moblify_session.sh
 
