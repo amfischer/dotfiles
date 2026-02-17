@@ -4,6 +4,6 @@
 return {
     url = "https://codeberg.org/andyg/leap.nvim",
     config = function()
-        require("leap").set_default_mappings()
+        require("leap")
     end,
 }

@@ -66,6 +66,10 @@ vim.keymap.set("n", "<Leader>cc", ":close<CR>")
 -- vim.keymap.set("n", "<A-9>", ":bprevious<CR>")
 -- vim.keymap.set("n", "<A-0>", ":bnext<CR>")
 
+-- Switch between tabs
+vim.keymap.set("n", "<A-9>", ":tabprev<CR>")
+vim.keymap.set("n", "<A-0>", ":tabnext<CR>")
+
 -- Save file more easily
 vim.keymap.set("n", "<C-s>", ":w<CR>")
 vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>")
