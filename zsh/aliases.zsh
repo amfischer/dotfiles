@@ -5,8 +5,7 @@ alias kkl='cd .. && ls -la'
 alias ..='cd .. && ls -la'
 alias ex.='explorer.exe .'
 alias ll='ls -lah'
-alias v='NVIM_APPNAME="nvim-altair" ~/nvim.appimage'
-alias vl='NVIM_APPNAME="nvim-laracasts" ~/nvim.appimage'
+alias v='nvim'
 
 alias rgf='rg --files | rg'
 
