@@ -2,83 +2,92 @@
 -- https://github.com/nvim-treesitter/nvim-treesitter
 
 return {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    dependencies = {
-        "nvim-treesitter/nvim-treesitter-textobjects",
-        "JoosepAlviste/nvim-ts-context-commentstring",
-        "windwp/nvim-ts-autotag",
-    },
-    opts = {
-        ensure_installed = {
-            "bash",
-            "blade",
-            "caddy",
-            "css",
-            "diff",
-            "dockerfile",
-            "glimmer",
-            "html",
-            "javascript",
-            "json",
-            "lua",
-            "markdown",
-            "nginx",
-            "markdown_inline",
-            "php",
-            "ruby",
-            "scss",
-            "tsx",
-            "typescript",
-            "vim",
-            "vimdoc",
-            "vue",
-            "yaml",
+    {
+        "nvim-treesitter/nvim-treesitter",
+        lazy = false,
+        build = ":TSUpdate",
+        branch = "main",
+        dependencies = {
+            "JoosepAlviste/nvim-ts-context-commentstring",
+            { "nvim-treesitter/nvim-treesitter-textobjects", branch = "main" },
+            "windwp/nvim-ts-autotag",
         },
-        -- Autoinstall languages that are not installed
-        auto_install = true,
-        highlight = {
-            enable = true,
-            -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
-            --  If you are experiencing weird indenting issues, add the language to
-            --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-            additional_vim_regex_highlighting = { "ruby" },
-        },
-        indent = {
-            enable = true,
-            disable = { "ruby" },
-        },
-        textobjects = {
-            select = {
-                enable = true,
-                lookahead = true,
-                keymaps = {
-                    ["if"] = "@function.inner",
-                    ["af"] = "@function.outer",
-                    ["ia"] = "@parameter.inner",
-                    ["aa"] = "@parameter.outer",
+        config = function()
+            require("nvim-treesitter").setup {}
+
+            require("nvim-treesitter").install {
+                "bash",
+                "blade",
+                "caddy",
+                "comment",
+                "css",
+                "diff",
+                "dockerfile",
+                "git_config",
+                "git_rebase",
+                "gitattributes",
+                "gitcommit",
+                "gitignore",
+                "glimmer",
+                "html",
+                "http",
+                "ini",
+                "javascript",
+                "json",
+                "lua",
+                "make",
+                "markdown",
+                "nginx",
+                "markdown_inline",
+                "php",
+                "php_only",
+                "phpdoc",
+                "regex",
+                "ruby",
+                "scss",
+                "sql",
+                "tsx",
+                "typescript",
+                "vim",
+                "vimdoc",
+                "vue",
+                "xml",
+                "yaml",
+            }
+
+            -- Treesitter indentation (highlighting is automatic in Neovim 0.11+)
+            vim.api.nvim_create_autocmd("FileType", {
+                callback = function()
+                    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+                end,
+            })
+
+            -- Textobjects (replaces textobjects opts)
+            require("nvim-treesitter-textobjects").setup {
+                select = {
+                    lookahead = true,
                 },
-            },
-        },
-        autotag = {
-            enable = true,
-        },
+            }
+
+            vim.keymap.set({ "x", "o" }, "if", function()
+                require("nvim-treesitter-textobjects.select").select_textobject("@function.inner", "textobjects")
+            end)
+
+            vim.keymap.set({ "x", "o" }, "af", function()
+                require("nvim-treesitter-textobjects.select").select_textobject("@function.outer", "textobjects")
+            end)
+
+            vim.keymap.set({ "x", "o" }, "ia", function()
+                require("nvim-treesitter-textobjects.select").select_textobject("@parameter.inner", "textobjects")
+            end)
+
+            vim.keymap.set({ "x", "o" }, "aa", function()
+                require("nvim-treesitter-textobjects.select").select_textobject("@parameter.outer", "textobjects")
+            end)
+
+            -- Autotag (replaces autotag opts)
+            require("nvim-ts-autotag").setup()
+        end,
     },
-    config = function(_, opts)
-        -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
-
-        vim.treesitter.language.register("glimmer", "html")
-
-        -- Prefer git instead of curl in order to improve connectivity in some environments
-        require("nvim-treesitter.install").prefer_git = true
-        ---@diagnostic disable-next-line: missing-fields
-        require("nvim-treesitter.configs").setup(opts)
-
-        -- There are additional nvim-treesitter modules that you can use to interact
-        -- with nvim-treesitter. You should go explore a few and see what interests you:
-        --
-        --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
-        --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
-        --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
-    end,
 }
+-- vim: ts=2 sts=2 sw=2 et
