@@ -55,9 +55,17 @@ return {
                 "yaml",
             }
 
-            -- Treesitter indentation (highlighting is automatic in Neovim 0.11+)
             vim.api.nvim_create_autocmd("FileType", {
+                pattern = { "<filetype>" },
                 callback = function()
+                    -- enables treesitter highlighting
+                    vim.treesitter.start()
+
+                    -- enables treesitter based folds, see `:help folds`
+                    vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+                    vim.wo.foldmethod = "expr"
+
+                    -- enables treesitter based indentation
                     vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
                 end,
             })
@@ -70,20 +78,27 @@ return {
             }
 
             vim.keymap.set({ "x", "o" }, "if", function()
+                -- inside function
                 require("nvim-treesitter-textobjects.select").select_textobject("@function.inner", "textobjects")
             end)
 
             vim.keymap.set({ "x", "o" }, "af", function()
+                -- around function
                 require("nvim-treesitter-textobjects.select").select_textobject("@function.outer", "textobjects")
             end)
 
             vim.keymap.set({ "x", "o" }, "ia", function()
+                -- inside parameter
                 require("nvim-treesitter-textobjects.select").select_textobject("@parameter.inner", "textobjects")
             end)
 
             vim.keymap.set({ "x", "o" }, "aa", function()
+                -- around parameter
                 require("nvim-treesitter-textobjects.select").select_textobject("@parameter.outer", "textobjects")
             end)
+
+            -- Show treesitter log messages
+            -- vim.api.nvim_create_user_command("TSLog", function() require("nvim-treesitter.log").show() end, { desc = "Show nvim-treesitter log messages" })
 
             -- Autotag (replaces autotag opts)
             require("nvim-ts-autotag").setup()
