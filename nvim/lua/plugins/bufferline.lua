@@ -3,13 +3,13 @@
 
 return {
     "akinsho/bufferline.nvim",
-    enabled = false,
+    enabled = true,
     version = "*",
     dependencies = "nvim-tree/nvim-web-devicons",
     opts = {
         options = {
             separator_style = "slant",
-            mode = "tabs",
+            -- mode = "tabs",
         },
     },
     config = function(_, opts)
