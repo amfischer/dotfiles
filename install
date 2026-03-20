@@ -8,6 +8,7 @@ ln -s $DOTFILES/nvim $HOME/.config/nvim
 
 # Tmux
 # ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
+ln -sf $DOTFILES/tmux/tmux.conf.local $HOME/.config/tmux/tmux.conf.local
 ln -sf $DOTFILES/tmux/session.sh $HOME/.local/bin/tmux-session
 
 # zsh
