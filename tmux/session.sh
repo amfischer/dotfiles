@@ -12,12 +12,7 @@ declare -A WORKDIRS=(
   [talon]="$HOME/projects/talon-bigcommerce"
 )
 
-declare -A NODE_VERSIONS=(
-  [kahtoola]="20"
-  [talon]="20"
-)
-
-declare -A STENCIL_CHECK=(
+declare -A BIG_COMMERCE=(
   [kahtoola]=1
   [talon]=1
 )
@@ -51,11 +46,8 @@ if [[ $? != 0 ]]; then
   # Build startup commands
   local hooks="tmux send-keys -t $SESSION:git \"git status\" C-m"
 
-  if [[ -n "${NODE_VERSIONS[$SESSION]}" ]]; then
-    hooks="tmux send-keys -t $SESSION:main \"nvm use ${NODE_VERSIONS[$SESSION]}\" C-m; $hooks"
-  fi
-
-  if [[ -n "${STENCIL_CHECK[$SESSION]}" ]]; then
+  if [[ -n "${BIG_COMMERCE[$SESSION]}" ]]; then
+    hooks="$hooks; tmux send-keys -t $SESSION:main \"nvm use 20\" C-m"
     hooks="$hooks; sleep 1; tmux send-keys -t $SESSION:main \"stencil -V\" C-m"
   fi
 

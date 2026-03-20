@@ -7,7 +7,7 @@ rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
 
 # Tmux
-ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
+# ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 ln -sf $DOTFILES/tmux/session.sh $HOME/.local/bin/tmux-session
 
 # zsh
