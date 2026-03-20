@@ -9,6 +9,16 @@ alias v='nvim'
 
 alias rgf='rg --files | rg'
 
+# Tmux Sessions
+alias tcoid='tmux-session coid'
+alias tdot='tmux-session dotfiles'
+alias tkah='tmux-session kahtoola'
+alias tmob='tmux-session moblify'
+alias tmoney='tmux-session money'
+alias trenav='tmux-session renav'
+alias trenavtitle='tmux-session renavtitle'
+alias ttalon='tmux-session talon'
+
 alias lg='lazygit'
 
 alias rj='cd ~/projects && ls -la'

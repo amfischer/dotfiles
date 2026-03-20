@@ -8,17 +8,7 @@ ln -s $DOTFILES/nvim $HOME/.config/nvim
 
 # Tmux
 ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
-
-ln -sf $DOTFILES/tmux/sessions/coid.sh $HOME/coid_session.sh
-ln -sf $DOTFILES/tmux/sessions/dotfiles.sh $HOME/dotfiles_session.sh
-ln -sf $DOTFILES/tmux/sessions/kahtoola.sh $HOME/kahtoola_session.sh
-ln -sf $DOTFILES/tmux/sessions/money.sh $HOME/money_session.sh
-ln -sf $DOTFILES/tmux/sessions/renav.sh $HOME/renav_session.sh
-ln -sf $DOTFILES/tmux/sessions/renavtitle.sh $HOME/renavtitle_session.sh
-ln -sf $DOTFILES/tmux/sessions/talon.sh $HOME/talon_session.sh
-ln -sf $DOTFILES/tmux/sessions/moblify.sh $HOME/moblify_session.sh
-
-chmod 744 -R $DOTFILES/tmux/sessions
+ln -sf $DOTFILES/tmux/session.sh $HOME/.local/bin/tmux-session
 
 # zsh
 ln -sf $DOTFILES/zsh/aliases.zsh $HOME/.oh-my-zsh/custom/aliases.zsh
