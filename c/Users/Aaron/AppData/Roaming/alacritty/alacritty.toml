@@ -16,3 +16,6 @@ normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 
 [terminal]
 shell = { program = 'C:\Windows\System32\wsl.exe ~', args = ["-d Ubuntu-22.04"] }
+
+[selection]
+save_to_clipboard = true
