@@ -4,9 +4,7 @@
 vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight when yanking (copying) text",
     group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
-    callback = function()
-        vim.highlight.on_yank()
-    end,
+    callback = function() vim.highlight.on_yank() end,
 })
 
 -- open diagnositc float
@@ -27,13 +25,13 @@ vim.keymap.set("v", "y", "myy`y")
 -- vim.keymap.set('n', 'q:', ':q')
 
 -- Paste replace visual selection without copying it.
-vim.keymap.set('v', 'p', '"_dP')
+vim.keymap.set("v", "p", '"_dP')
 
 -- Delete word forward in insert mode
 vim.keymap.set("i", "<C-Del>", "<C-o>dw")
 
 -- Easier way to leave insert mode
-vim.keymap.set("i", "jj", "<Esc>");
+vim.keymap.set("i", "jj", "<Esc>")
 
 -- Easy insertion of a trailing ; or , from insert mode.
 vim.keymap.set("i", ";;", "<Esc>A;")
@@ -67,8 +65,8 @@ vim.keymap.set("n", "<Leader>cc", ":close<CR>")
 -- vim.keymap.set("n", "<A-0>", ":bnext<CR>")
 
 -- Switch between tabs
-vim.keymap.set("n", "<A-9>", ":tabprev<CR>")
-vim.keymap.set("n", "<A-0>", ":tabnext<CR>")
+-- vim.keymap.set("n", "<A-9>", ":tabprev<CR>")
+-- vim.keymap.set("n", "<A-0>", ":tabnext<CR>")
 
 -- Save file more easily
 vim.keymap.set("n", "<C-s>", ":w<CR>")
@@ -88,3 +86,10 @@ vim.keymap.set("n", "<A-y>", ":d<CR>")
 -- change delete previous word
 vim.keymap.set("i", "<C-BS>", "<C-W>")
 
+-- better page scrolling
+vim.keymap.set("n", "<PageDown>", "<C-d>zz")
+vim.keymap.set("n", "<PageUp>", "<C-u>zz")
+
+-- better n search
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")

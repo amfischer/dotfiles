@@ -8,7 +8,6 @@ require("lazy").setup({
 
     { "numToStr/Comment.nvim", opts = {} },
     { "windwp/nvim-autopairs", opts = {} },
-    { "karb94/neoscroll.nvim", opts = {} },
 
     require("plugins/ale"),
     require("plugins/bufferline"),
@@ -20,6 +19,7 @@ require("lazy").setup({
     require("plugins/lspconfig"),
     require("plugins/lualine"),
     require("plugins/mini"),
+    require("plugins/neoscroll"),
     require("plugins/neotest"),
     require("plugins/oil"),
     require("plugins/rooter"),
