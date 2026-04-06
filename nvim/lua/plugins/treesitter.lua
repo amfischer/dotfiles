@@ -7,6 +7,7 @@ return {
         lazy = false,
         build = ":TSUpdate",
         branch = "main",
+        commit = "90cd6580e720caedacb91fdd587b747a6e77d61f",
         dependencies = {
             "JoosepAlviste/nvim-ts-context-commentstring",
             { "nvim-treesitter/nvim-treesitter-textobjects", branch = "main" },
