@@ -10,11 +10,16 @@ declare -A WORKDIRS=(
   [renav]="$HOME/projects/renav-legacy"
   [renavtitle]="$HOME/projects/renav-title"
   [talon]="$HOME/projects/talon-bigcommerce"
+  [blue]="$HOME/projects/stay-with-blue"
 )
 
 declare -A BIG_COMMERCE=(
   [kahtoola]=1
   [talon]=1
+)
+
+declare -A NODE_VERSIONS=(
+  [blue]=24
 )
 
 # --- Resolve session ---
@@ -49,6 +54,13 @@ if [[ $? != 0 ]]; then
   if [[ -n "${BIG_COMMERCE[$SESSION]}" ]]; then
     hooks="$hooks; tmux send-keys -t $SESSION:main \"nvm use 20\" C-m"
     hooks="$hooks; sleep 1; tmux send-keys -t $SESSION:main \"stencil -V\" C-m"
+  fi
+
+  if [[ -n "${NODE_VERSIONS[$SESSION]}" ]]; then
+    local node_version="${NODE_VERSIONS[$SESSION]}"
+    for window in main git code agents; do
+      hooks="$hooks; tmux send-keys -t $SESSION:$window \"nvm use $node_version\" C-m"
+    done
   fi
 
   tmux set-hook -t "$SESSION" client-attached \
