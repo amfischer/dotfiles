@@ -56,6 +56,9 @@ return {
                 "yaml",
             }
 
+            -- Use html parser for antlers filetype until a dedicated parser is available
+            vim.treesitter.language.register("html", "antlers")
+
             vim.api.nvim_create_autocmd("FileType", {
                 callback = function(args)
                     local buf, filetype = args.buf, args.match

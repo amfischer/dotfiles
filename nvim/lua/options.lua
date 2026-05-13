@@ -59,6 +59,10 @@ vim.opt.confirm = true -- ask for confirmation instead of erroring
 
 vim.filetype.add({
     pattern = { [".*%.antlers%.html"] = "antlers" },
+    filename = {
+        [".jsbeautifyrc"] = "jsonc",
+        ["jsbeautifyrc"] = "jsonc",
+    },
 })
 
 -- vim.opt.undofile = true -- persistent undo
