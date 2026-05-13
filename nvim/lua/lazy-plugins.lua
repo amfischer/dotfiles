@@ -17,7 +17,7 @@ require("lazy").setup({
     require("plugins/indent-blankline"),
     require("plugins/laravel"),
     require("plugins/lazydev"),
-    require("plugins/leap"),
+    -- require("plugins/leap"),
     require("plugins/lspconfig"),
     require("plugins/lualine"),
     require("plugins/mini"),

@@ -3,6 +3,9 @@
 
 return {
     "dense-analysis/ale",
+    keys = {
+        { "<A-p>", ":ALEFix<CR>", desc = "ALE: fix file" },
+    },
     init = function()
         vim.g.ale_fixers = {
             javascript = { "prettier" },
@@ -21,10 +24,9 @@ return {
             scss = {},
             html = {},
             lua = {},
+            markdown = {},
         }
         vim.g.ale_disable_lsp = 1
-    end,
-    config = function()
-        vim.keymap.set("n", "<A-p>", ":ALEFix<CR>")
+        vim.g.ale_linters_explicit = 1
     end,
 }
