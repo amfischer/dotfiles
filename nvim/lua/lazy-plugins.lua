@@ -31,6 +31,7 @@ require("lazy").setup({
     require "plugins/telescope",
     require "plugins/textobj-xmlattr",
     require "plugins/toggleterm",
+    require "plugins/ufo",
     require "plugins/tokyonight",
     require "plugins/treesitter",
     require "plugins/vim-tmux-navigator",

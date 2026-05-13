@@ -4,11 +4,22 @@
 vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight when yanking (copying) text",
     group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
-    callback = function() vim.highlight.on_yank() end,
+    callback = function()
+        vim.highlight.on_yank()
+    end,
 })
 
 -- open diagnositc float
 vim.keymap.set("n", "J", vim.diagnostic.open_float)
+
+-- Toggle fold under cursor
+vim.keymap.set("n", "<CR>", "za", { desc = "Toggle fold" })
+
+-- Restore <CR> in quickfix/help where it's used to follow the item/tag under cursor
+-- vim.api.nvim_create_autocmd("FileType", {
+--     pattern = { "qf", "help" },
+--     callback = function() vim.keymap.set("n", "<CR>", "<CR>", { buffer = true }) end,
+-- })
 
 -- When text is wrapped, move by terminal rows, not lines, unless a count is provided.
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
