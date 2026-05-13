@@ -61,8 +61,8 @@ vim.keymap.set("n", "<Leader>cc", ":close<CR>")
 -- vim.keymap.set("n", "<Leader>dd", ":bdelete<CR>")
 
 -- Switch between buffers
--- vim.keymap.set("n", "<A-9>", ":bprevious<CR>")
--- vim.keymap.set("n", "<A-0>", ":bnext<CR>")
+vim.keymap.set("n", "<A-9>", ":bprevious<CR>")
+vim.keymap.set("n", "<A-0>", ":bnext<CR>")
 
 -- Switch between tabs
 -- vim.keymap.set("n", "<A-9>", ":tabprev<CR>")
@@ -87,8 +87,8 @@ vim.keymap.set("n", "<A-y>", ":d<CR>")
 vim.keymap.set("i", "<C-BS>", "<C-W>")
 
 -- better page scrolling
-vim.keymap.set("n", "<PageDown>", "<C-d>zz")
-vim.keymap.set("n", "<PageUp>", "<C-u>zz")
+-- vim.keymap.set("n", "<PageDown>", "<C-d>zz")
+-- vim.keymap.set("n", "<PageUp>", "<C-u>zz")
 
 -- better n search
 vim.keymap.set("n", "n", "nzzzv")

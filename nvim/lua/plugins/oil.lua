@@ -4,10 +4,11 @@
 return {
     {
         "stevearc/oil.nvim",
+        enabled = false,
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function()
-            require("oil").setup()
-            vim.keymap.set("n", "<A-o>", ":Oil<CR>")
-        end,
+        keys = {
+            { "<A-o>", ":Oil<CR>", desc = "Open Oil file explorer" },
+        },
+        opts = {},
     },
 }
