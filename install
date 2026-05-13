@@ -14,3 +14,6 @@ ln -sf $DOTFILES/tmux/session.sh $HOME/.local/bin/tmux-session
 # zsh
 ln -sf $DOTFILES/zsh/aliases.zsh $HOME/.oh-my-zsh/custom/aliases.zsh
 ln -sf $DOTFILES/zsh/env.zsh $HOME/.oh-my-zsh/custom/env.zsh
+
+# js-beautify
+ln -sf $DOTFILES/jsbeautifyrc $HOME/.jsbeautifyrc

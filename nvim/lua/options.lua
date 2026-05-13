@@ -57,6 +57,10 @@ vim.opt.clipboard = 'unnamedplus' -- use system clipboard
 
 vim.opt.confirm = true -- ask for confirmation instead of erroring
 
+vim.filetype.add({
+    pattern = { [".*%.antlers%.html"] = "antlers" },
+})
+
 -- vim.opt.undofile = true -- persistent undo
 -- vim.opt.backup = true -- automatically save a backup file
 -- vim.opt.backupdir:remove('.') -- keep backups out of the current directory

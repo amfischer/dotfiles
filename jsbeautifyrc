@@ -1,0 +1,22 @@
+{
+    "indent_size": 4,
+    "indent_char": " ",
+    "end_with_newline": true,
+    "eol": "\n",
+    "preserve_newlines": true,
+    "max_preserve_newlines": 2,
+    "wrap_line_length": 120,
+
+    "html": {
+        "wrap_attributes": "force-expand-multiline",
+        "wrap_attributes_min_attrs": 2,
+        "indent_inner_html": false,
+        "extra_liners": []
+    },
+
+    "css": {
+        "newline_between_rules": true,
+        "selector_separator_newline": true,
+        "space_around_combinator": true
+    }
+}
