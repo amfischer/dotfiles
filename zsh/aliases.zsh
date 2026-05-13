@@ -33,7 +33,7 @@ alias coid='cd ~/projects/coid-app/'
 alias zen='cd ~/projects/modernzen/'
 alias mob='cd ~/projects/moblify/'
 alias dot='cd ~/projects/dotfiles/'
-alias blue='cd ~/projects/stay-with-blue/'
+alias blue='cd ~/projects/with-blue/'
 
 # Docker Commands
 alias dcu='docker-compose up'

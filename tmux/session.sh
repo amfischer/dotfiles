@@ -10,7 +10,7 @@ declare -A WORKDIRS=(
   [renav]="$HOME/projects/renav-legacy"
   [renavtitle]="$HOME/projects/renav-title"
   [talon]="$HOME/projects/talon-bigcommerce"
-  [blue]="$HOME/projects/stay-with-blue"
+  [blue]="$HOME/projects/with-blue"
 )
 
 declare -A BIG_COMMERCE=(
@@ -19,7 +19,7 @@ declare -A BIG_COMMERCE=(
 )
 
 declare -A NODE_VERSIONS=(
-  [blue]=24
+  # [blue]=24
 )
 
 # --- Resolve session ---
