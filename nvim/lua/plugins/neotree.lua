@@ -11,7 +11,8 @@ return {
     },
     lazy = false,
     keys = {
-        { "<A-o>", ":Neotree reveal float toggle<CR>", desc = "Toggle Neo-tree" },
+        { "<A-o>", ":Neotree reveal right toggle<CR>", desc = "Toggle Neo-tree" },
+        { "<F5>", ":Neotree reveal right toggle<CR>", desc = "Toggle Neo-tree" },
     },
     ---@module "neo-tree"
     ---@type neotree.Config?
