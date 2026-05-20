@@ -72,8 +72,8 @@ vim.keymap.set("n", "<Leader>cc", ":close<CR>")
 -- vim.keymap.set("n", "<Leader>dd", ":bdelete<CR>")
 
 -- Switch between buffers
-vim.keymap.set("n", "<A-9>", ":bprevious<CR>")
-vim.keymap.set("n", "<A-0>", ":bnext<CR>")
+vim.keymap.set("n", "<A-9>", ":tabprevious<CR>")
+vim.keymap.set("n", "<A-0>", ":tabnext<CR>")
 vim.keymap.set("n", "<C-PageDown>", ":bprevious<CR>")
 vim.keymap.set("n", "<C-PageUp>", ":bnext<CR>")
 
@@ -86,10 +86,15 @@ vim.keymap.set("n", "<C-s>", ":w<CR>")
 vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>")
 
 -- Switch windows more easily
--- vim.keymap.set('n', '<C-H>', '<C-W><C-H>')
--- vim.keymap.set('n', '<C-L>', '<C-W><C-L>')
--- vim.keymap.set('n', '<C-J>', '<C-W><C-J>')
--- vim.keymap.set('n', '<C-K>', '<C-W><C-K>')
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
+
+vim.keymap.set("n", "<C-Left>", "<C-w>h")
+vim.keymap.set("n", "<C-Down>", "<C-w>j")
+vim.keymap.set("n", "<C-Up>", "<C-w>k")
+vim.keymap.set("n", "<C-Right>", "<C-w>l")
 
 vim.keymap.set("n", "<A-d>", ":t.<CR>")
 vim.keymap.set("n", "<A-y>", ":d<CR>")
