@@ -15,6 +15,7 @@ require("lazy").setup({
     require "plugins/conform",
     require "plugins/fugitive",
     require "plugins/gitsigns",
+    require "plugins/incline",
     require "plugins/indent-blankline",
     require "plugins/laravel",
     require "plugins/lazydev",
