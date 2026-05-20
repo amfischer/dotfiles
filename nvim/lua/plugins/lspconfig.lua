@@ -79,11 +79,15 @@ return {
         vim.lsp.enable "tailwindcss"
         vim.lsp.config("tailwindcss", {
             capabilities = capabilities,
-            filetypes = { "html", "vue", "typescript" },
+            filetypes = { "html", "css", "scss", "javascript", "vue", "typescript", "antlers", "blade" },
             settings = {
                 tailwindCSS = {
                     files = {
                         exclude = { "**/vendor/**" },
+                    },
+                    includeLanguages = {
+                        antlers = "html",
+                        blade = "html",
                     },
                 },
             },
