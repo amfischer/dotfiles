@@ -74,6 +74,7 @@ vim.keymap.set("n", "<Leader>cc", ":close<CR>")
 -- Switch between buffers
 vim.keymap.set("n", "<A-9>", ":tabprevious<CR>")
 vim.keymap.set("n", "<A-0>", ":tabnext<CR>")
+vim.keymap.set("n", "<A-t>", ":tabnew<CR>")
 vim.keymap.set("n", "<C-PageDown>", ":bprevious<CR>")
 vim.keymap.set("n", "<C-PageUp>", ":bnext<CR>")
 
