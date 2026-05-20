@@ -14,8 +14,21 @@ return {
                 padding = 0,
             },
             render = function(props)
-                local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
+                local full = vim.api.nvim_buf_get_name(props.buf)
+                local filename = vim.fn.fnamemodify(full, ":t")
                 if filename == "" then filename = "[No Name]" end
+
+                -- If another listed buffer shares this filename, prefix the parent dir
+                for _, b in ipairs(vim.api.nvim_list_bufs()) do
+                    if b ~= props.buf and vim.bo[b].buflisted then
+                        local other = vim.api.nvim_buf_get_name(b)
+                        if other ~= "" and vim.fn.fnamemodify(other, ":t") == filename then
+                            filename = vim.fn.fnamemodify(full, ":~:.")
+                            break
+                        end
+                    end
+                end
+
                 local ft_icon, ft_color = devicons.get_icon_color(filename)
                 local modified = vim.bo[props.buf].modified
                 local cursorline = vim.api.nvim_get_hl(0, { name = "CursorLine", link = false })
