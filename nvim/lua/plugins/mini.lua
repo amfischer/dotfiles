@@ -8,6 +8,8 @@ return {
         config = function()
             -- https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-bufremove.md
             require("mini.bufremove").setup()
+            -- https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-misc.md
+            require("mini.misc").setup()
         end,
         keys = {
             {
@@ -23,6 +25,13 @@ return {
                     require("mini.bufremove").delete(0, true)
                 end,
                 desc = "Force delete buffer",
+            },
+            {
+                "<leader>z",
+                function()
+                    require("mini.misc").zoom()
+                end,
+                desc = "Zoom window",
             },
         },
     },
