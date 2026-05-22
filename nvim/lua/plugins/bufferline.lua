@@ -48,6 +48,9 @@ return {
     config = function(_, opts)
         require("bufferline").setup(opts)
 
+        -- Bufferline only re-runs name_formatter when the tabline is redrawn, and
+        -- creating/closing a split doesn't trigger that by default. Force a redraw
+        -- so the label flips between "filename" and "cwd" the moment splits change.
         vim.api.nvim_create_autocmd({ "WinNew", "WinClosed" }, {
             group = vim.api.nvim_create_augroup("bufferline_refresh", { clear = true }),
             callback = function()

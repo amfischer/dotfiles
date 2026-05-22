@@ -11,6 +11,7 @@ declare -A WORKDIRS=(
   [renavtitle]="$HOME/projects/renav-title"
   [talon]="$HOME/projects/talon-bigcommerce"
   [blue]="$HOME/projects/with-blue"
+  [stay]="$HOME/projects/stay-with-blue"
 )
 
 declare -A BIG_COMMERCE=(

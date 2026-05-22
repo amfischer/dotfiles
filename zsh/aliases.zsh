@@ -19,6 +19,7 @@ alias trenav='tmux-session renav'
 alias trenavtitle='tmux-session renavtitle'
 alias ttalon='tmux-session talon'
 alias tblue='tmux-session blue'
+alias tstay='tmux-session stay'
 
 alias lg='lazygit'
 
@@ -33,7 +34,7 @@ alias coid='cd ~/projects/coid-app/'
 alias zen='cd ~/projects/modernzen/'
 alias mob='cd ~/projects/moblify/'
 alias dot='cd ~/projects/dotfiles/'
-alias blue='cd ~/projects/with-blue/'
+alias stay='cd ~/projects/stay-with-blue/'
 
 # Docker Commands
 alias dcu='docker-compose up'
