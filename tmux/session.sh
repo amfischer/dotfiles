@@ -14,13 +14,16 @@ declare -A WORKDIRS=(
   [stay]="$HOME/projects/stay-with-blue"
 )
 
-declare -A BIG_COMMERCE=(
-  [kahtoola]=1
-  [talon]=1
+declare -A NODE_VERSIONS=(
+  [kahtoola]=20
+  [talon]=22
+  # [blue]=24
 )
 
-declare -A NODE_VERSIONS=(
-  # [blue]=24
+# BigCommerce projects: show `stencil -V` on the main window
+declare -A STENCIL=(
+  [kahtoola]=1
+  [talon]=1
 )
 
 # --- Resolve session ---
@@ -50,18 +53,25 @@ if [[ $? != 0 ]]; then
   tmux new-window -t "$SESSION" -n agents -c "$WORKDIR"
 
   # Build startup commands
-  local hooks="tmux send-keys -t $SESSION:git \"git status\" C-m"
+  local hooks="true"
 
-  if [[ -n "${BIG_COMMERCE[$SESSION]}" ]]; then
-    hooks="$hooks; tmux send-keys -t $SESSION:main \"nvm use 20\" C-m"
-    hooks="$hooks; sleep 1; tmux send-keys -t $SESSION:main \"stencil -V\" C-m"
-  fi
-
+  local ran_nvm=""
   if [[ -n "${NODE_VERSIONS[$SESSION]}" ]]; then
     local node_version="${NODE_VERSIONS[$SESSION]}"
     for window in main git code agents; do
       hooks="$hooks; tmux send-keys -t $SESSION:$window \"nvm use $node_version\" C-m"
     done
+    ran_nvm=1
+  fi
+
+  if [[ -n "$ran_nvm" ]]; then
+    hooks="$hooks; sleep 1"
+  fi
+
+  hooks="$hooks; tmux send-keys -t $SESSION:git \"git status\" C-m"
+
+  if [[ -n "${STENCIL[$SESSION]}" ]]; then
+    hooks="$hooks; tmux send-keys -t $SESSION:main \"stencil -V\" C-m"
   fi
 
   tmux set-hook -t "$SESSION" client-attached \
