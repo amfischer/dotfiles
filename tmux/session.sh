@@ -4,6 +4,7 @@
 declare -A WORKDIRS=(
   [coid]="$HOME/projects/coid-app"
   [dotfiles]="$HOME/projects/dotfiles"
+  [dotfiles-private]="$HOME/projects/dotfiles-private"
   [kahtoola]="$HOME/projects/kahtoola"
   [moblify]="$HOME/projects/moblify"
   [money]="$HOME/projects/expense-tracker"
@@ -15,7 +16,7 @@ declare -A WORKDIRS=(
 )
 
 declare -A NODE_VERSIONS=(
-  [kahtoola]=20
+  [kahtoola]=22
   [talon]=22
   # [blue]=24
 )

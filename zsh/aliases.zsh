@@ -12,6 +12,7 @@ alias rgf='rg --files | rg'
 # Tmux Sessions
 alias tcoid='tmux-session coid'
 alias tdot='tmux-session dotfiles'
+alias tdotp='tmux-session dotfiles-private'
 alias tkah='tmux-session kahtoola'
 alias tmob='tmux-session moblify'
 alias tmoney='tmux-session money'
@@ -34,6 +35,7 @@ alias coid='cd ~/projects/coid-app/'
 alias zen='cd ~/projects/modernzen/'
 alias mob='cd ~/projects/moblify/'
 alias dot='cd ~/projects/dotfiles/'
+alias dotp='cd ~/projects/dotfiles-private/'
 alias stay='cd ~/projects/stay-with-blue/'
 
 # Docker Commands
