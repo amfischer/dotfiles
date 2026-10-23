@@ -2,6 +2,7 @@
 
 # --- Config ---
 declare -A WORKDIRS=(
+  [arorp]="$HOME/projects/arorp-statamic"
   [coid]="$HOME/projects/coid-app"
   [dotfiles]="$HOME/projects/dotfiles"
   [dotfiles-private]="$HOME/projects/dotfiles-private"

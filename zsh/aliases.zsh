@@ -10,6 +10,7 @@ alias v='nvim'
 alias rgf='rg --files | rg'
 
 # Tmux Sessions
+alias tarorp='tmux-session arorp'
 alias tcoid='tmux-session coid'
 alias tdot='tmux-session dotfiles'
 alias tdotp='tmux-session dotfiles-private'
@@ -37,6 +38,8 @@ alias mob='cd ~/projects/moblify/'
 alias dot='cd ~/projects/dotfiles/'
 alias dotp='cd ~/projects/dotfiles-private/'
 alias stay='cd ~/projects/stay-with-blue/'
+alias blue='cd ~/projects/with-blue/'
+alias arorp='cd ~/projects/arorp-statamic/'
 
 # Docker Commands
 alias dcu='docker-compose up'
